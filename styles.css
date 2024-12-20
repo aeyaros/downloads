@@ -5,9 +5,9 @@
 
 	--pagePadding: 50px;
 
-	--modulePaddingH: 30px;
-	--modulePaddingV: 50px;
-	--moduleMarginV: 50px;
+	--modulePaddingH: 32px;
+	--modulePaddingV: 32px;
+	--moduleMarginV: 48px;
 	--moduleShadowOffset: calc(var(--modulePaddingH) / 4);
 }
 
