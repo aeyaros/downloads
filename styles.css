@@ -11,6 +11,14 @@
 	--moduleShadowOffset: calc(var(--modulePaddingH) / 4);
 }
 
+@media screen and (max-width: 420px) {
+		:root {
+				--pagePadding: 50px 10px;
+				--modulePaddingH: 16px;
+				--modulePaddingV: 24px;
+		}
+	}
+
 @media screen and (prefers-color-scheme: light) {
 	:root {
 		--bg: #bbb;
