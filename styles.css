@@ -103,6 +103,7 @@ p {
 .moduleBannerContainer {
 	display: flex;
 	flex-flow: row nowrap;
+	pointer-events: none!important;
 }
 
 .moduleBanner {
@@ -112,6 +113,7 @@ p {
 	user-select: none!important;
 	background-position: center;
 	background-size: cover;
+	pointer-events: none!important;
 }
 
 .button {
