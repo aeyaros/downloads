@@ -14,20 +14,22 @@
 
 @media screen and (prefers-color-scheme: light) {
 	:root {
-		--bg: #bbb;
-		--altBG: #999;
+		--bg: #eee;
+		--altBG: #ccc;
 		--color: #222;
-		--lines: #999;
+		--lines: #666;
 	}
+	html { background-image: url('bgHi.svg'); }
 }
 
 @media screen and (prefers-color-scheme: dark) {
 	:root {
-		--bg: #232323;
-		--altBG: #121212;
+		--bg: #222;
+		--altBG: #111;
 		--lines: #555;
 		--color: #ddd;
 	}
+	html { background-image: url('bgLo.svg'); }
 }
 
 html {
@@ -37,11 +39,16 @@ html {
 			calc(env(safe-area-inset-bottom, 0) + var(--pagePaddingV))
 			calc(env(safe-area-inset-left, 0) + var(--pagePaddingH)) !important;
 	color: var(--color) !important;
+
+	background-color: var(--bg);
+	background-size: 16px;
+	background-position: center;
+	background-repeat: repeat;
+	background-attachment: fixed;
 }
 
 body {
 	font-family: serif;
-	background-color: var(--bg);
 	margin: 0 auto;
 	max-width: calc(800px + (2 * var(--modulePaddingH)));
 }
