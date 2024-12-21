@@ -138,6 +138,7 @@ p {
 @media screen and (max-width: 580px) {
 	#intro {
 		flex-flow: column nowrap;
+		gap: calc(var(--pagePaddingV) / 3);
 	}
 }
 
