@@ -3,7 +3,8 @@
 :root {
 	color-scheme: light dark;
 
-	--pagePadding: 50px;
+	--pagePaddingH: 50px;
+	--pagePaddingV: 50px;
 
 	--modulePaddingH: 32px;
 	--modulePaddingV: 32px;
@@ -13,7 +14,7 @@
 
 @media screen and (max-width: 420px) {
 		:root {
-				--pagePadding: 50px 10px;
+				--pagePaddingH: 10px;
 				--modulePaddingH: 16px;
 				--modulePaddingV: 24px;
 		}
@@ -39,10 +40,10 @@
 
 html {
 	margin:
-			calc(env(safe-area-inset-top, 0) + var(--pagePadding))
-			calc(env(safe-area-inset-right, 0) + var(--pagePadding))
-			calc(env(safe-area-inset-bottom, 0) + var(--pagePadding))
-			calc(env(safe-area-inset-left, 0) + var(--pagePadding)) !important;
+			calc(env(safe-area-inset-top, 0) + var(--pagePaddingV))
+			calc(env(safe-area-inset-right, 0) + var(--pagePaddingH))
+			calc(env(safe-area-inset-bottom, 0) + var(--pagePaddingV))
+			calc(env(safe-area-inset-left, 0) + var(--pagePaddingH)) !important;
 	color: var(--color) !important;
 }
 
