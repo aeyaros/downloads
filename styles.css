@@ -80,6 +80,14 @@ p {
 	margin-bottom: .75em;
 }
 
+#intro {
+	display: flex;
+	flex-flow: row nowrap;
+	gap: var(--pagePaddingV);
+	justify-content: space-between;
+	align-items: center;
+}
+
 .module {
 	padding: var(--modulePaddingV) var(--modulePaddingH);
 	border-radius: var(--modulePaddingH);
