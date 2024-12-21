@@ -9,15 +9,17 @@
 	--modulePaddingH: 32px;
 	--modulePaddingV: 32px;
 	--moduleMarginV: 48px;
-	--moduleShadowOffset: calc(var(--modulePaddingH) / 4);
+	--moduleShadowOffset: 40px;
+
 }
 
 @media screen and (prefers-color-scheme: light) {
 	:root {
-		--bg: #eee;
-		--altBG: #ccc;
+		--bg: #ddd;
+		--altBG: #eee;
 		--color: #222;
 		--lines: #666;
+		--shadowColor: rgba(128, 128, 128, 0.5);
 	}
 	html { background-image: url('bgHi.svg'); }
 }
@@ -28,6 +30,7 @@
 		--altBG: #111;
 		--lines: #555;
 		--color: #ddd;
+		--shadowColor: rgba(0, 0, 0, 0.5);
 	}
 	html { background-image: url('bgLo.svg'); }
 }
@@ -41,7 +44,7 @@ html {
 	color: var(--color) !important;
 
 	background-color: var(--bg);
-	background-size: 16px;
+	background-size: 24px;
 	background-position: center;
 	background-repeat: repeat;
 	background-attachment: fixed;
@@ -89,13 +92,10 @@ p {
 }
 
 .module {
+	background-color: var(--bg);
 	padding: var(--modulePaddingV) var(--modulePaddingH);
 	border-radius: var(--modulePaddingH);
-
-	/*background-color: var(--altBG);*/
-	box-shadow:
-			var(--moduleShadowOffset) var(--moduleShadowOffset) var(--modulePaddingH) inset var(--altBG),
-			calc(-1* var(--moduleShadowOffset)) calc(-1 * var(--moduleShadowOffset)) var(--modulePaddingH) inset var(--altBG);
+	box-shadow: 0 0 var(--moduleShadowOffset) inset var(--shadowColor);
 	margin: var(--moduleMarginV) 0;
 
 }
@@ -120,7 +120,7 @@ p {
 	display: inline-block !important;
 	padding: 15px;
 	background-color: var(--altBG);
-	border-color: var(--lines);
+	border-color: var(--color);
 	border-style: dotted;
 	border-width: 2px;
 	border-radius: 1em;
@@ -152,6 +152,11 @@ p {
 @media screen and (max-width: 420px) {
 	:root {
 		--pagePaddingH: 20px;
-		--modulePaddingH: 0px;
+		--modulePaddingH: 0;
+		--moduleShadowOffset: 0;
+	}
+
+	.module {
+		background-color: unset!important;
 	}
 }
