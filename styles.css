@@ -13,12 +13,11 @@
 }
 
 @media screen and (max-width: 420px) {
-		:root {
-				--pagePaddingH: 10px;
-				--modulePaddingH: 16px;
-				--modulePaddingV: 24px;
-		}
+	:root {
+		--pagePaddingH: 20px;
+		--modulePaddingH: 0px;
 	}
+}
 
 @media screen and (prefers-color-scheme: light) {
 	:root {
@@ -89,15 +88,19 @@ p {
 	box-shadow:
 			var(--moduleShadowOffset) var(--moduleShadowOffset) var(--modulePaddingH) inset var(--altBG),
 			calc(-1* var(--moduleShadowOffset)) calc(-1 * var(--moduleShadowOffset)) var(--modulePaddingH) inset var(--altBG);
-
 	margin: var(--moduleMarginV) 0;
 
 }
 
+.moduleBannerContainer {
+	display: flex;
+	flex-flow: row nowrap;
+}
+
 .moduleBanner {
-	max-width: 100% !important;
-	height: 256px!important;
 	margin-top: 32px;
+	width: 100%;
+	height: 256px!important;
 	user-select: none!important;
 	background-position: center;
 	background-size: cover;
@@ -110,7 +113,7 @@ p {
 	border-color: var(--lines);
 	border-style: dotted;
 	border-width: 2px;
-	border-radius: 1.5em;
+	border-radius: 1em;
 	color: var(--color) !important;
 	text-decoration: none!important;
 	user-select: none!important;
@@ -119,7 +122,6 @@ p {
 	margin-bottom: 15px;
 	text-align: center;
 	font-family: "Helvetica", "Arial", sans-serif;
-
 }
 
 .button:hover {
