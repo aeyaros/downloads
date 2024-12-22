@@ -15,8 +15,8 @@
 
 @media screen and (prefers-color-scheme: light) {
 	:root {
-		--bg: #ddd;
-		--altBG: #eee;
+		--bg: #bbb;
+		--altBG: #fff;
 		--color: #222;
 		--lines: #666;
 		--shadowColor: rgba(128, 128, 128, 0.5);
@@ -27,7 +27,7 @@
 @media screen and (prefers-color-scheme: dark) {
 	:root {
 		--bg: #222;
-		--altBG: #111;
+		--altBG: #000;
 		--lines: #555;
 		--color: #ddd;
 		--shadowColor: rgba(0, 0, 0, 0.5);
@@ -95,10 +95,10 @@ p {
 }
 
 .module {
-	background-color: var(--bg);
+	background-color: var(--altBG);
 	padding: var(--modulePaddingV) var(--modulePaddingH);
 	border-radius: var(--modulePaddingH);
-	box-shadow: 0 0 var(--moduleShadowOffset) inset var(--shadowColor);
+	/*box-shadow: 0 0 var(--moduleShadowOffset) inset var(--shadowColor);*/
 	margin: var(--moduleMarginV) 0;
 
 }
