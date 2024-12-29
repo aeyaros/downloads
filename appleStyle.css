@@ -1,0 +1,456 @@
+/* @license Macintosh stylesheet by Andrew Yaros */
+
+/* FONTS */
+@font-face {
+	/* Title font */
+	font-family: "System Font";
+	src: url("./system/fonts/ChiKareGo2.ttf")
+}
+
+/* VARIABLES */
+:root {
+
+	/*====== lengths ======*/
+
+	/* all these items should be the same multiple of the original lengths */
+	--integerScaling: 2;
+
+
+	/* lengths not based on original dimensions */
+	--lengthScreenPadding: calc(var(--integerScaling) * 20px); /* arbitrary */
+
+	/* lengths based on actual pixel sizes */
+	--lengthLineThickness: calc(var(--integerScaling) * 1px);
+	--lengthLineThicknessNegative: calc(var(--integerScaling) * -1px);
+
+	--LengthBackgroundTile: calc(var(--integerScaling) * 8px);
+	--lengthScreenCorner: calc(var(--integerScaling) * 5px);
+
+
+	--lengthSystemFontSize: calc(var(--integerScaling) * 16px);
+
+	--lengthScrollbarThickness: calc(var(--integerScaling) * 16px);
+	--lengthScrollbarButtonInnerElement: calc(var(--integerScaling) * 14px);
+	--lengthScrollbarReducedButton: calc(var(--integerScaling) * 15px);
+
+	--lengthMenuBarHeight: calc(var(--integerScaling) * 20px);
+	--lengthMenuBarTitleMargin: calc(var(--integerScaling) * 15px);
+	--lengthMenuBarSelectionPadding:calc(var(--integerScaling) * 10px);
+	--lengthMenuBarSelectionPaddingNegative: calc(-1 * var(--lengthMenuBarSelectionPadding));
+
+	--lengthAppleMenuLogoWidth: calc(var(--integerScaling) * 9px);
+	--lengthAppleMenuLogoHeight: calc(var(--integerScaling) * 11px);
+	--lengthAppleMenuLogoMargin: calc(var(--integerScaling) * 19px);
+
+	--lengthTitlebarInsideHeight: calc(var(--integerScaling) * 17px);
+	--lengthTitlebarBoxInside: calc(var(--integerScaling) * 9px);
+	--lengthTitlebarBoxMargin: calc(var(--integerScaling) * 8px); /* actually should be 6px but the 1px box shadows aren't accounted for, hence the need to make this 2px wider */
+	--lengthTitlebarTextPadding: calc(var(--integerScaling) * 7px);
+
+	/*====== Colors ======*/
+	color-scheme: only light!important;
+	--lo: black;
+	--hi: white;
+
+	/* Firefox Scrollbars */
+	/* This disables custom scrollbars on chrome... */
+	/*scrollbar-color: var(--lo) var(--hi);*/
+}
+
+@media (max-width: 1024px) {
+	:root {
+		--integerScaling: 1;
+	}
+}
+
+@media (max-height: 684px) {
+	:root {
+		--integerScaling: 1;
+	}
+}
+
+
+
+/* SCROLLBARS */
+
+.window {
+	margin: 0;
+	padding: 0;
+	border: var(--lengthLineThickness) solid var(--lo);
+	box-shadow: var(--lengthLineThickness) var(--lengthLineThickness) var(--lo);
+	background-color: var(--hi);
+
+	display: flex;
+	flex-flow: column nowrap;
+}
+
+.windowTitleBar {
+	border-bottom: var(--lengthLineThickness) solid var(--lo);
+	height: var(--lengthTitlebarInsideHeight);
+
+	display: flex;
+	justify-content: space-between;
+	align-content: stretch;
+
+	background-image: url("./system/svg/titlebarBG.svg");
+	background-position: center;
+	background-size: var(--lengthLineThickness) var(--lengthTitlebarInsideHeight);
+	background-repeat: repeat-x;
+	box-shadow: inset var(--lengthLineThickness) 0 var(--hi),
+	inset var(--lengthLineThicknessNegative) 0 var(--hi);
+}
+
+.windowTitleBar div {
+	background-color: var(--hi);
+}
+
+.windowCloseBox, .windowResizeBox {
+	width: var(--lengthTitlebarBoxInside);
+	height: var(--lengthTitlebarBoxInside);
+	margin: auto var(--lengthTitlebarBoxMargin) auto var(--lengthTitlebarBoxMargin);
+	border: var(--lo) solid var(--lengthLineThickness);
+	box-shadow: var(--lengthLineThickness) 0 var(--hi), var(--lengthLineThicknessNegative) 0 var(--hi);
+}
+
+.windowTitle {
+	padding: 0 var(--lengthTitlebarTextPadding) 0 var(--lengthTitlebarTextPadding);
+	line-height: var(--lengthTitlebarInsideHeight);
+}
+
+.windowResizeBox {
+	background-image: url("./system/svg/titlebarresizebox.svg");
+	background-size: var(--lengthTitlebarBoxInside) var(--lengthTitlebarBoxInside);
+	background-repeat: no-repeat;
+}
+
+.windowContent {
+	flex: 1;
+	display: flex;
+	flex-flow: column nowrap;
+}
+
+/* Webkit Scrollbars */
+::-webkit-scrollbar {
+	background-color: var(--hi);
+	border: 0;
+}
+
+::-webkit-scrollbar:vertical {
+	width: var(--lengthScrollbarReducedButton);
+}
+
+::-webkit-scrollbar:horizontal {
+	height: var(--lengthScrollbarReducedButton);
+}
+
+/* scrollbar tracks */
+::-webkit-scrollbar-track {
+	background-image: url("./system/svg/scrollbarTrack.svg");
+	background-repeat: repeat;
+	background-size: var(--LengthBackgroundTile);
+}
+
+::-webkit-scrollbar-track:vertical {
+	border-left: var(--lengthLineThickness) solid var(--lo);
+}
+
+::-webkit-scrollbar-track:horizontal {
+	border-top: var(--lengthLineThickness) solid var(--lo);
+}
+
+/* scrollbar thumbs */
+::-webkit-scrollbar-thumb {
+	border: var(--lengthLineThickness) solid var(--lo);
+	background-color: var(--hi);
+}
+
+::-webkit-scrollbar-thumb:vertical {
+	width: var(--lengthScrollbarReducedButton) !important;
+	box-shadow: inset var(--lengthLineThickness) 0 var(--lo);
+}
+
+::-webkit-scrollbar-thumb:horizontal {
+	height: var(--lengthScrollbarReducedButton) !important;
+	box-shadow: inset 0 var(--lengthLineThickness) var(--lo);
+}
+
+
+/* scrollbar buttons */
+::-webkit-scrollbar-button, ::-webkit-scrollbar-corner, ::-webkit-resizer {
+	display: block !important;
+	width: var(--lengthScrollbarReducedButton);
+	height: var(--lengthScrollbarReducedButton);
+	background-size: var(--lengthScrollbarButtonInnerElement);
+	background-repeat: no-repeat;
+}
+
+::-webkit-scrollbar-corner, ::-webkit-resizer {
+	border-left: var(--lengthLineThickness) solid var(--lo);
+	border-top: var(--lengthLineThickness) solid var(--lo);
+}
+
+::-webkit-resizer {
+	background-image: url("system/svg/resizebox.svg");
+}
+
+::-webkit-scrollbar-button:vertical {
+	border-left: var(--lengthLineThickness) solid var(--lo);
+}
+
+::-webkit-scrollbar-button:horizontal {
+	border-top: var(--lengthLineThickness) solid var(--lo);
+}
+
+::-webkit-scrollbar-button:vertical:decrement {
+	background-image: url("system/svg/arrowUp.svg");
+	border-bottom: var(--lengthLineThickness) solid var(--lo);
+}
+
+::-webkit-scrollbar-button:vertical:increment {
+	background-image: url("system/svg/arrowDown.svg");
+	border-top: var(--lengthLineThickness) solid var(--lo);
+}
+
+::-webkit-scrollbar-button:horizontal:decrement {
+	background-image: url("system/svg/arrowLeft.svg");
+	border-right: var(--lengthLineThickness) solid var(--lo);
+}
+
+::-webkit-scrollbar-button:horizontal:increment {
+	background-image: url("system/svg/arrowRight.svg");
+	border-left: var(--lengthLineThickness) solid var(--lo);
+}
+
+/* hide double scrollbuttons */
+::-webkit-scrollbar-button:vertical:start:increment,
+::-webkit-scrollbar-button:vertical:end:decrement,
+::-webkit-scrollbar-button:horizontal:start:increment,
+::-webkit-scrollbar-button:horizontal:end:decrement {
+	display: none !important;
+}
+
+::-webkit-scrollbar-button:window-inactive, ::-webkit-scrollbar-thumb:window-inactive {
+	display: none !important;
+}
+
+::-webkit-scrollbar-track:window-inactive {
+	background-image: none;
+}
+
+
+/* TEXT SELECTION */
+::selection {
+	color: var(--hi);
+	background: var(--lo);
+}
+
+::-moz-selection {
+	color: var(--hi);
+	background: var(--lo);
+}
+
+/* STYLES */
+
+html, body {
+	width: 100vw;
+	height: 100vh;
+}
+
+body {
+	margin: 0;
+
+	/* Disable font smoothing wherever possible */
+	font-smooth: never;
+	-webkit-font-smoothing: none;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+#monitor {
+	background-color: var(--lo);
+	position: fixed;
+
+	width: 100%;
+	height: 100%;
+
+	top: 0;
+	left: 0;
+
+	display: flex;
+}
+
+#screen {
+	flex: 1;
+	display: flex;
+	flex-flow: column nowrap;
+
+	background-color: var(--hi);
+	background-image: url("./system/svg/default.svg");
+	background-repeat: repeat;
+	background-size: var(--LengthBackgroundTile);
+	background-attachment: local;
+
+	position: fixed;
+	top: var(--lengthScreenPadding);
+	left: var(--lengthScreenPadding);
+
+	width: calc(100vw - (2 * var(--lengthScreenPadding)));
+	height: calc(100vh - (2 * var(--lengthScreenPadding)));
+
+	z-index: 10;
+}
+
+.screencorner {
+	position: fixed!important;
+	width: var(--lengthScreenCorner);
+	height: var(--lengthScreenCorner);
+
+	background-color: transparent;
+	background-image: url("system/svg/screenCorner.svg");
+	background-repeat: no-repeat;
+	background-size: var(--lengthScreenCorner);
+
+	z-index: 20;
+}
+
+#screencorner_upper_left {
+	top: var(--lengthScreenPadding);
+	left: var(--lengthScreenPadding);
+}
+
+#screencorner_upper_right {
+	transform: rotate(90deg);
+	top: var(--lengthScreenPadding);
+	right: var(--lengthScreenPadding);
+}
+
+#screencorner_lower_left {
+	transform: rotate(270deg);
+	bottom: var(--lengthScreenPadding);
+	left: var(--lengthScreenPadding);
+}
+
+#screencorner_lower_right {
+	transform: rotate(180deg);
+	bottom: var(--lengthScreenPadding);
+	right: var(--lengthScreenPadding);
+}
+
+#desktop {
+	width: 100%;
+	height: 100%;
+	overflow-y: auto;
+}
+
+hr {
+	/* height: var(--UIlineWidth); */
+}
+
+.solidHR {
+	border-top: var(--lengthLineThickness) solid var(--lo);
+}
+
+.dottedHR {
+	border-top: var(--lengthLineThickness) dotted var(--lo);
+}
+
+.fontSystem {
+	font-family: "System Font", ChiKareGo2, ChiKareGo, PixChicago, Chicago, Silom, "Trebuchet MS", sans-serif;
+	font-size: var(--lengthSystemFontSize);
+}
+
+
+/* Menu Bar */
+/* outer container - vertically align the inner container */
+#topMenuBar {
+	width: 100%;
+	background-color: var(--hi);
+	height: var(--lengthMenuBarHeight);
+	display: flex;
+	align-items: flex-end;
+	box-shadow: 0 -2px 0 var(--lo) inset;
+}
+
+/* inner container - used to align menu items by baseline */
+#topMenuItems {
+	display: flex;
+	align-items: baseline !important;
+	flex-wrap: nowrap;
+}
+
+.menu {
+	color: var(--lo);
+	padding: var(--lengthLineThickness) 0 var(--lengthLineThickness) 0;
+	margin-right: var(--lengthMenuBarTitleMargin);
+	border: 0;
+}
+
+.textMenu {
+	user-select: none;
+}
+
+#appleMenu {
+	margin-left: var(--lengthAppleMenuLogoMargin);
+	width: var(--lengthAppleMenuLogoWidth);
+}
+
+/*when menus are selected, use these styles: */
+
+#appleMenu:hover polyline {
+	fill: var(--hi) !important;
+}
+
+.menu:hover {
+	box-shadow: var(--lengthMenuBarSelectionPadding) 0 var(--lo), var(--lengthMenuBarSelectionPaddingNegative) 0 var(--lo), 4px 0 var(--lo), -4px 0 var(--lo);
+	background-color: var(--lo);
+	color: var(--hi);
+}
+
+.module {
+	width: 800px;
+	max-width: calc(100% - 80px);
+
+	margin: 40px auto;
+}
+
+
+.innerMargin {
+	margin: calc(var(--integerScaling) * 14px);
+}
+
+
+.moduleBannerContainer {
+	display: flex;
+	flex-flow: row nowrap;
+	pointer-events: none!important;
+}
+
+.moduleBanner {
+	height: calc(var(--integerScaling) * 128px)!important;
+	width: 100%;
+	margin-bottom: calc(var(--integerScaling) * 14px);
+	user-select: none!important;
+	background-position: center;
+	background-size: cover;
+	background-color: var(--lo);
+	pointer-events: none!important;
+}
+
+.button {
+	display: inline-block;
+	padding: .2em .5em;
+	border-radius: .4em;
+	border: calc(var(--integerScaling) * 1.5px) solid var(--lo);
+	user-select: none!important;
+	color: var(--lo);
+	background-color: var(--hi);
+	text-decoration: none!important;
+	cursor: pointer!important;
+	margin-right: calc(var(--integerScaling) * 15px);
+	margin-bottom: calc(var(--integerScaling) * 8px);
+}
+
+.button:active {
+	border-color: var(--hi);
+	color: var(--hi);
+	background-color: var(--lo);
+}
