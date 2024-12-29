@@ -408,7 +408,6 @@ hr {
 .module {
 	width: 800px;
 	max-width: calc(100% - 80px);
-
 	margin: 40px auto;
 }
 
@@ -425,14 +424,15 @@ hr {
 }
 
 .moduleBanner {
-	height: calc(var(--integerScaling) * 128px)!important;
-	width: 100%;
+	height: 256px !important;
+	width: calc(100% - calc(2 * var(--integerScaling) * 1px));
 	margin-bottom: calc(var(--integerScaling) * 14px);
 	user-select: none!important;
 	background-position: center;
 	background-size: cover;
 	background-color: var(--lo);
 	pointer-events: none!important;
+	border: calc(1px * var(--integerScaling)) solid black;
 }
 
 .button {
