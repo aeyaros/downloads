@@ -4,7 +4,11 @@
 @font-face {
 	/* Title font */
 	font-family: "System Font";
-	src: url("./system/fonts/ChiKareGo2.ttf") /* font credit: http://www.suppertime.co.uk/blogmywiki/2017/04/chicago/ */
+	src: url("./system/fonts/ChiKareGo2.ttf")
+	/* font credit:
+	http://www.suppertime.co.uk/blogmywiki/2017/04/chicago/
+	https://www.pentacom.jp/pentacom/bitfontmaker2/gallery/?id=3778
+	*/
 }
 
 /* VARIABLES */
