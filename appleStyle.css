@@ -4,7 +4,7 @@
 @font-face {
 	/* Title font */
 	font-family: "System Font";
-	src: url("./system/fonts/ChiKareGo2.ttf")
+	src: url("./system/fonts/ChiKareGo2.ttf") /* font credit: http://www.suppertime.co.uk/blogmywiki/2017/04/chicago/ */
 }
 
 /* VARIABLES */
@@ -98,6 +98,10 @@
 	background-repeat: repeat-x;
 	box-shadow: inset var(--lengthLineThickness) 0 var(--hi),
 	inset var(--lengthLineThicknessNegative) 0 var(--hi);
+}
+
+.windowTitleBar, .windowTitleBar *, #topMenuBar, #topMenuBar *, br, hr {
+	user-select: none;
 }
 
 .windowTitleBar div {
@@ -382,10 +386,6 @@ hr {
 	padding: var(--lengthLineThickness) 0 var(--lengthLineThickness) 0;
 	margin-right: var(--lengthMenuBarTitleMargin);
 	border: 0;
-}
-
-.textMenu {
-	user-select: none;
 }
 
 #appleMenu {
