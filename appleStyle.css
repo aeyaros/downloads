@@ -367,7 +367,7 @@ hr {
 	height: var(--lengthMenuBarHeight);
 	display: flex;
 	align-items: flex-end;
-	box-shadow: 0 -2px 0 var(--lo) inset;
+	box-shadow: 0 calc(-1px * var(--integerScaling)) 0 var(--lo) inset;
 }
 
 /* inner container - used to align menu items by baseline */
