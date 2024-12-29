@@ -406,11 +406,21 @@ hr {
 }
 
 .module {
-	width: 800px;
-	max-width: calc(100% - 80px);
-	margin: 40px auto;
+	max-width: calc(100% - calc(var(--integerScaling) * 100px));
+	margin: calc(var(--integerScaling) * 40px) auto;
 }
 
+@media (max-width: 444px) {
+	.module {
+		max-width: calc(100% - calc(var(--integerScaling) * 50px));
+	}
+}
+
+@media (max-height: 444px) {
+	.module {
+		margin: calc(var(--integerScaling) * 20px) auto;
+	}
+}
 
 .innerMargin {
 	margin: calc(var(--integerScaling) * 14px);
