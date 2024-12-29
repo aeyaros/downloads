@@ -426,6 +426,12 @@ hr {
 	}
 }
 
+@media (min-width: 1337px) {
+	.module {
+		max-width: 76vw;
+	}
+}
+
 .innerMargin {
 	margin: calc(var(--integerScaling) * 14px);
 }
