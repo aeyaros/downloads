@@ -311,7 +311,7 @@ body {
 	background-size: var(--LengthBackgroundTile);
 	background-attachment: local;
 
-	position: fixed;
+	position: absolute;
 	top: var(--lengthScreenPadding);
 	left: var(--lengthScreenPadding);
 
@@ -322,7 +322,7 @@ body {
 }
 
 .screencorner {
-	position: fixed!important;
+	position: absolute!important;
 	width: var(--lengthScreenCorner);
 	height: var(--lengthScreenCorner);
 
@@ -335,26 +335,26 @@ body {
 }
 
 #screencorner_upper_left {
-	top: var(--lengthScreenPadding);
-	left: var(--lengthScreenPadding);
+	top: 0;/*var(--lengthScreenPadding);*/
+	left: 0;/*var(--lengthScreenPadding);*/
 }
 
 #screencorner_upper_right {
 	transform: rotate(90deg);
-	top: var(--lengthScreenPadding);
-	right: var(--lengthScreenPadding);
+	top: 0;/*var(--lengthScreenPadding);*/
+	right: 0;/*var(--lengthScreenPadding);*/
 }
 
 #screencorner_lower_left {
 	transform: rotate(270deg);
-	bottom: var(--lengthScreenPadding);
-	left: var(--lengthScreenPadding);
+	bottom: 0;/*var(--lengthScreenPadding);*/
+	left: 0;/*var(--lengthScreenPadding);*/
 }
 
 #screencorner_lower_right {
 	transform: rotate(180deg);
-	bottom: var(--lengthScreenPadding);
-	right: var(--lengthScreenPadding);
+	bottom: 0;/*var(--lengthScreenPadding);*/
+	right: 0;/*var(--lengthScreenPadding);*/
 }
 
 #desktop {
