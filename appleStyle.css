@@ -274,8 +274,8 @@
 /* STYLES */
 
 html, body {
-	width: 100vw;
-	height: 100vh;
+	width: 100%;
+	height: 100%;
 }
 
 body {
@@ -315,8 +315,8 @@ body {
 	top: var(--lengthScreenPadding);
 	left: var(--lengthScreenPadding);
 
-	width: calc(100vw - (2 * var(--lengthScreenPadding)));
-	height: calc(100vh - (2 * var(--lengthScreenPadding)));
+	width: calc(100% - (2 * var(--lengthScreenPadding)));
+	height: calc(100% - (2 * var(--lengthScreenPadding)));
 
 	z-index: 10;
 }
