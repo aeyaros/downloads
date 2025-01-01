@@ -119,7 +119,7 @@
 }
 
 .windowTitleBar, .windowTitleBar *, #topMenuBar, #topMenuBar *, br, hr {
-	user-select: none;
+	user-select: none!important;
 }
 
 .windowTitleBar div {
