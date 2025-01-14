@@ -116,6 +116,7 @@
 	background-repeat: repeat-x;
 	box-shadow: inset var(--lengthLineThickness) 0 var(--hi),
 	inset var(--lengthLineThicknessNegative) 0 var(--hi);
+	cursor: default!important;
 }
 
 .windowTitleBar, .windowTitleBar *, #topMenuBar, #topMenuBar *, br, hr, .menu, .menu * {
