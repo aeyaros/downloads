@@ -367,6 +367,10 @@ hr {
 	/* height: var(--UIlineWidth); */
 }
 
+a {
+	cursor: pointer!important;
+}
+
 .solidHR {
 	border: none;
 	border-top: var(--lengthLineThickness) solid var(--lo);
@@ -406,7 +410,8 @@ hr {
 	padding: var(--lengthLineThickness) 0 var(--lengthLineThickness) 0;
 	margin-right: var(--lengthMenuBarTitleMargin);
 	border: 0;
-	cursor: default!important;
+	cursor: default;
+	text-decoration: none;
 }
 
 #appleMenu {
