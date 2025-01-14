@@ -118,8 +118,11 @@
 	inset var(--lengthLineThicknessNegative) 0 var(--hi);
 }
 
-.windowTitleBar, .windowTitleBar *, #topMenuBar, #topMenuBar *, br, hr {
+.windowTitleBar, .windowTitleBar *, #topMenuBar, #topMenuBar *, br, hr, .menu, .menu * {
 	user-select: none!important;
+	-ms-user-select: none;
+	-moz-user-select: none;
+	-webkit-user-select: none;
 }
 
 .windowTitleBar div {
