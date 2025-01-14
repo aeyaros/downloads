@@ -368,10 +368,12 @@ hr {
 }
 
 .solidHR {
+	border: none;
 	border-top: var(--lengthLineThickness) solid var(--lo);
 }
 
 .dottedHR {
+	border: none;
 	border-top: var(--lengthLineThickness) dotted var(--lo);
 }
 
