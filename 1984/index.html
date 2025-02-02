@@ -3,6 +3,8 @@
 <head>
 	<meta charset="UTF-8">
 	<title>1984 Redux</title>
+	<meta name="viewport"
+			content="width=device-width, initial-scale=1, maximum-scale=3, minimum-scale=1, viewport-fit=contain">
 	<style>
 
 		:root {
@@ -28,6 +30,14 @@
 			margin-bottom: 1.5em;
 		}
 
+		.icon {
+			width: 32px;
+			height: 32px;
+			background-size: contain;
+			background-repeat: no-repeat;
+			background-position: center;
+		}
+
 		#titlebar {
 			width: 100%;
 			height: 100px;
@@ -36,7 +46,13 @@
 			font-size: 36px;
 
 			display: flex;
+			justify-content: space-between;
 			align-items: center;
+			gap: 10px;
+		}
+
+		.spacer {
+			flex-grow: 3;
 		}
 
 		#footer {
@@ -81,6 +97,26 @@
 			max-width: calc(100% - var(--imageWidth));
 		}
 
+		.linkArea {
+			width: 100%;
+			display: flex;
+			flex-flow: nowrap;
+			align-items: center;
+			gap: 10px;
+			margin-bottom: 10px;
+
+			color: gray;
+			font-weight: bold;
+			font-size: 15px;
+		}
+
+		.linkArea, .linkArea * {
+			cursor: pointer!important;
+		}
+
+		.linkArea:hover, .linkArea:active {
+			color: white;
+		}
 
 		@media (max-width: 850px) {
 			#main {
@@ -111,7 +147,12 @@
 </head>
 <body>
 <div id="titlebar">
-1984 Redux
+	<div>1984 Redux</div>
+	<div class="spacer"></div>
+	<div class="icon" style='background-image: url("iPod.png");'></div>
+	<div class="icon" style='background-image: url("Phone.png");'></div>
+	<div class="icon" style='background-image: url("Safari.png");'></div>
+	<div class="icon" style='background-image: url("FieldTest.png");'></div>
 </div>
 <div id="main">
 <!--	<img src="iphoneinhand.png" draggable="false" id="mainImage" />-->
@@ -129,6 +170,24 @@
 		<p>
 			This will work fine on a jailbroken iPhone 2G or iPod Touch 1G with Summerboard installed. It will probably work fine on newer versions of iOS in Winterboard. I reccomend using an era-appropriate version of DiskAid to transfer over the files.
 		</p>
+
+		<div class="linkArea">
+			<div class="icon" style='background-image: url("Installer.png");'></div>
+			Download the Theme
+		</div>
+
+		<div class="linkArea">
+			<div class="icon" style='background-image: url("iTunes.png");'></div>
+			Return to the Downloads Page
+		</div>
+
+
+		<div class="linkArea">
+			<div class="icon" style='background-image: url("Sketches.png");'></div>
+			Return to My Homepage
+		</div>
+
+
 	</div>
 </div>
 <div id="footer">
