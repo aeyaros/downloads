@@ -3,8 +3,20 @@
 <head>
 	<meta charset="UTF-8">
 	<title>1984 Redux</title>
+	<meta name='author' content='Andrew Yaros'>
+	<meta name="title" content="1984 Redux">
 	<meta name="viewport"
 			content="width=device-width, initial-scale=1, maximum-scale=3, minimum-scale=1, viewport-fit=contain">
+	<meta name="description"
+			content='A remaster of the original "1984" Summerboard theme for jailbroken iPhones.'>
+
+	<!-- Social media preview: Open Graph -->
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="https://yaros.ae/downloads/1984">
+	<meta property="og:title" content="1984 Redux">
+	<meta property="og:description" content='A remaster of the original "1984" Summerboard theme for jailbroken iPhones.'>
+	<meta property="og:image" content="https://yaros.ae/downloads/1984/social.jpg">
+
 	<style>
 
 		:root {
@@ -31,19 +43,27 @@
 		}
 
 		.icon {
-			width: 32px;
-			height: 32px;
+			width: 32px!important;
+			height: 32px!important;
+			min-width: 32px;
+			min-height: 32px;
 			background-size: contain;
 			background-repeat: no-repeat;
 			background-position: center;
 		}
 
-		#titlebar {
+		.mainMargin {
 			width: 100%;
+			margin: auto;
+			max-width: 980px;
+		}
+
+		#titlebar {
 			height: 100px;
 
 			font-family: 'Apple Garamond', serif;
 			font-size: 36px;
+			line-height: 1em;
 
 			display: flex;
 			justify-content: space-between;
@@ -52,11 +72,17 @@
 		}
 
 		.spacer {
-			flex-grow: 3;
+			flex-grow: 1;
+		}
+
+		#titleicons {
+			display: flex;
+			flex-flow: row wrap;
+			justify-content: center;
+			gap: 10px;
 		}
 
 		#footer {
-			width: 100%;
 			height: 150px;
 
 			display: flex;
@@ -65,12 +91,8 @@
 
 
 		#main {
-			border: 1px solid #444;
+			border: 1px solid #444444;
 
-			margin: auto;
-
-			width: 100%;
-			max-width: 980px;
 			height: 600px;
 
 			display: flex;
@@ -97,27 +119,53 @@
 			max-width: calc(100% - var(--imageWidth));
 		}
 
+
+		a {
+			color: #a6a6a6!important;
+			text-decoration: none!important;
+		}
+
+		hr {
+			background-color: #444444;
+			border: none;
+			height: 1px;
+		}
+
 		.linkArea {
-			width: 100%;
 			display: flex;
 			flex-flow: nowrap;
 			align-items: center;
 			gap: 10px;
 			margin-bottom: 10px;
 
-			color: gray;
+
+
 			font-weight: bold;
 			font-size: 15px;
+
+			/*background-color: green;*/
 		}
 
-		.linkArea, .linkArea * {
+		a, a * {
 			cursor: pointer!important;
 		}
 
-		.linkArea:hover, .linkArea:active {
-			color: white;
+		a:hover, a:active {
+			color: white!important;
 		}
 
+		#links {
+			width: max-content;
+		}
+
+		#bottomLinks {
+			margin-top: 10px;
+			display: flex;
+			flex-flow: row wrap;
+			gap: 8px 32px;
+		}
+
+		/* column view at small widths */
 		@media (max-width: 850px) {
 			#main {
 				flex-flow: column nowrap;
@@ -134,27 +182,49 @@
 			#mainText {
 				max-width: unset;
 				margin: 10px;
+			}
 
+			#links {
+				margin: auto;
+				align-items: center;
+			}
+
+			#bottomLinks {
+				margin-bottom: 32px;
 			}
 		}
 
+		/* less margin at smaller widths */
 		@media (max-width: 600px) {
 			body {
 				margin: 16px;
 			}
 		}
+
+		/* important adjustments for tiny widths */
+		@media (max-width: 384px) {
+			body {
+				margin: 8px;
+			}
+
+			#links {
+				width: 100%;
+			}
+		}
 	</style>
 </head>
 <body>
-<div id="titlebar">
+<div class="mainMargin" id="titlebar">
 	<div>1984 Redux</div>
 	<div class="spacer"></div>
-	<div class="icon" style='background-image: url("iPod.png");'></div>
-	<div class="icon" style='background-image: url("Phone.png");'></div>
-	<div class="icon" style='background-image: url("Safari.png");'></div>
-	<div class="icon" style='background-image: url("FieldTest.png");'></div>
+	<div id="titleicons">
+		<div class="icon" style='background-image: url("iPod.png");'></div>
+		<div class="icon" style='background-image: url("Phone.png");'></div>
+		<div class="icon" style='background-image: url("Safari.png");'></div>
+		<div class="icon" style='background-image: url("FieldTest.png");'></div>
+	</div>
 </div>
-<div id="main">
+<div class="mainMargin" id="main">
 <!--	<img src="iphoneinhand.png" draggable="false" id="mainImage" />-->
 	<div id="mainImage"></div>
 	<div id="mainText">
@@ -165,32 +235,49 @@
 		</p>
 
 		<p>
-			Most of the icons in the original theme were drawn at inconsistent scale, and many had scaling artifacts. In 1984 Redux, all the icons and graphics are drawn at 2x scale, chosen so the icons approximate the dimensions of those in the original Mac OS. Many of the new icons borrow (shamelessly) elements from classic Mac OS apps.
+			All the existing icons in the theme have been tweaked, edited, or redrawn entirely (at 2x scale) to remove inconsistencies and scaling artifacts. Many of the newly included icons shamelessly incorporate elements from classic Mac OS apps and UI graphics. The docks, menubar, and wallpaper images have also been redrawn from scratch.
 		</p>
+
 		<p>
 			This will work fine on a jailbroken iPhone 2G or iPod Touch 1G with Summerboard installed. It will probably work fine on newer versions of iOS in Winterboard. I reccomend using an era-appropriate version of DiskAid to transfer over the files.
 		</p>
 
-		<div class="linkArea">
-			<div class="icon" style='background-image: url("Installer.png");'></div>
-			Download the Theme
+		<div id="links">
+			<a class="linkArea" draggable="false" target="_blank" href="files/other/1984%20Redux%20Theme%20v1.0.zip">
+				<div class="icon" style='background-image: url("Installer.png");'></div>
+				Download the Theme
+			</a>
+
+			<!--
+			<a class="linkArea" draggable="false" href="../">
+				<div class="icon" style='background-image: url("iTunes.png");'></div>
+				Return to the Downloads Page
+			</a>
+
+
+			<a class="linkArea" draggable="false" href="../../">
+				<div class="icon" style='background-image: url("Sketches.png");'></div>
+				Return to My Homepage
+			</a>
+			-->
 		</div>
 
-		<div class="linkArea">
-			<div class="icon" style='background-image: url("iTunes.png");'></div>
-			Return to the Downloads Page
+		<br>
+		<hr>
+		<div id="bottomLinks">
+			<a draggable="false" href="../">
+				Return to the Downloads Page
+			</a>
+
+
+			<a draggable="false" href="../../">
+				Return to My Homepage
+			</a>
 		</div>
-
-
-		<div class="linkArea">
-			<div class="icon" style='background-image: url("Sketches.png");'></div>
-			Return to My Homepage
-		</div>
-
 
 	</div>
 </div>
-<div id="footer">
+<div class="mainMargin" id="footer">
 
 </div>
 </body>
