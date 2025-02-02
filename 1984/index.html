@@ -3,8 +3,136 @@
 <head>
 	<meta charset="UTF-8">
 	<title>1984 Redux</title>
+	<style>
+
+		:root {
+			--imageWidth: 60%;
+		}
+
+		html, body {
+			background-color: black;
+			color: white;
+		}
+
+		body {
+			margin: 64px;
+
+			font-variant-caps: normal;
+			font-weight: 400;
+			font-size: 12px;
+			line-height: 18px;
+			font-family: "Lucida Grande", Geneva, Arial, Verdana, sans-serif;
+		}
+
+		p {
+			margin-bottom: 1.5em;
+		}
+
+		#titlebar {
+			width: 100%;
+			height: 100px;
+
+			font-family: 'Apple Garamond', serif;
+			font-size: 36px;
+
+			display: flex;
+			align-items: center;
+		}
+
+		#footer {
+			width: 100%;
+			height: 150px;
+
+			display: flex;
+			flex-flow: row nowrap;
+		}
+
+
+		#main {
+			border: 1px solid #444;
+
+			margin: auto;
+
+			width: 100%;
+			max-width: 980px;
+			height: 600px;
+
+			display: flex;
+			flex-flow: row nowrap;
+			justify-content: space-between;
+
+		}
+
+		#main, #mainImage { border-radius: 16px; }
+
+		#mainImage {
+			width: var(--imageWidth);
+
+			/*background-color: #242;*/
+
+			background-image: url('iphoneinhand.png');
+			background-repeat: no-repeat;
+			background-position: bottom left;
+			background-size: contain;
+		}
+
+		#mainText {
+			margin: 30px 20px 30px 0;
+			max-width: calc(100% - var(--imageWidth));
+		}
+
+
+		@media (max-width: 850px) {
+			#main {
+				flex-flow: column nowrap;
+				max-height: unset;
+				height: unset;
+			}
+
+			#mainImage {
+				width: 100%;
+				height: 100vw;
+				border-bottom-left-radius: unset;
+			}
+
+			#mainText {
+				max-width: unset;
+				margin: 10px;
+
+			}
+		}
+
+		@media (max-width: 600px) {
+			body {
+				margin: 16px;
+			}
+		}
+	</style>
 </head>
 <body>
-	I'm going to be making a whole sexy page to show off the 1984 redux theme, I promise... soon...
+<div id="titlebar">
+1984 Redux
+</div>
+<div id="main">
+<!--	<img src="iphoneinhand.png" draggable="false" id="mainImage" />-->
+	<div id="mainImage"></div>
+	<div id="mainText">
+
+		<h3>Introducing 1984 Redux</h3>
+		<p>
+			This is an extensive rework of the original "1984" summerboard theme for iPhone OS 1 by Chris Reiff (Mr_Sparkle). It's a <i>gorgeous</i> 1-bit theme designed to make your iPhone 2G or iPod Touch 1G look like a Macintosh from 1984!
+		</p>
+
+		<p>
+			Most of the icons in the original theme were drawn at inconsistent scale, and many had scaling artifacts. In 1984 Redux, all the icons and graphics are drawn at 2x scale, chosen so the icons approximate the dimensions of those in the original Mac OS. Many of the new icons borrow (shamelessly) elements from classic Mac OS apps.
+		</p>
+		<p>
+			This will work fine on a jailbroken iPhone 2G or iPod Touch 1G with Summerboard installed. It will probably work fine on newer versions of iOS in Winterboard. I reccomend using an era-appropriate version of DiskAid to transfer over the files.
+		</p>
+	</div>
+</div>
+<div id="footer">
+
+</div>
 </body>
 </html>
