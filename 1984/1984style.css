@@ -175,11 +175,11 @@ a:hover, a:active { color: white!important; }
 
 	#mainText {
 		max-width: unset;
-		margin: 10px;
+		margin: 40px 20px;
 	}
 
 	#links {
-		margin: auto;
+		margin: 30px auto;
 		align-items: center;
 	}
 
