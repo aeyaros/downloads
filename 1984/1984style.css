@@ -8,21 +8,24 @@
 
 	--mediumColor: #a6a6a6;
 	--darkerColor: #333333;
-}
-
-html, body {
-	background-color: black;
-	color: white;
+	color-scheme: only dark!important;
 }
 
 body {
-	margin: 64px;
+
+	background-color: black!important;
+	color: white!important;
+	margin: 0!important;
 
 	font-variant-caps: normal;
 	font-weight: 400;
 	font-size: 12px;
 	line-height: 18px;
 	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans Geneva", "Arial", "Verdana", sans-serif;
+}
+
+#container {
+	padding: 64px;
 }
 
 p {
@@ -202,15 +205,15 @@ a:hover, a:active {
 
 /* less margin at smaller widths */
 @media (max-width: 600px) {
-	body {
-		margin: 16px;
+	#container {
+		padding: 32px;
 	}
 }
 
 /* important adjustments for tiny widths */
 @media (max-width: 384px) {
-	body {
-		margin: 8px;
+	#container {
+		padding: 8px;
 	}
 
 	#links {
