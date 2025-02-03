@@ -15,12 +15,15 @@
 	<meta property="og:url" content="https://yaros.ae/downloads/1984">
 	<meta property="og:title" content="1984 Redux">
 	<meta property="og:description" content='A remaster of the original "1984" Summerboard theme for jailbroken iPhones.'>
-	<meta property="og:image" content="https://yaros.ae/downloads/1984/social.jpg">
+	<meta property="og:image" content="https://yaros.ae/downloads/1984/images/social.jpg">
 
 	<style>
 
 		:root {
 			--imageWidth: 60%;
+
+			--mediumColor: #a6a6a6;
+			--darkerColor: #444444;
 		}
 
 		html, body {
@@ -35,7 +38,7 @@
 			font-weight: 400;
 			font-size: 12px;
 			line-height: 18px;
-			font-family: "Lucida Grande", Geneva, Arial, Verdana, sans-serif;
+			font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans Geneva", "Arial", "Verdana", sans-serif;
 		}
 
 		p {
@@ -58,10 +61,15 @@
 			max-width: 980px;
 		}
 
+		@font-face {
+			font-family: "Apple Garamond";
+			src: url("fonts/AppleGaramond.ttf");
+		}
+
 		#titlebar {
 			height: 100px;
 
-			font-family: 'Apple Garamond', serif;
+			font-family: 'Apple Garamond', "Adobe Garamond", serif;
 			font-size: 36px;
 			line-height: 1em;
 
@@ -87,11 +95,20 @@
 
 			display: flex;
 			flex-flow: row nowrap;
+			justify-content: center;
+			align-items: center;
+			max-width: 555px;
+		}
+
+		.sosumi {
+			color: var(--mediumColor);
+			font-size: 10px;
+			text-align: center;
 		}
 
 
 		#main {
-			border: 1px solid #444444;
+			border: 1px solid var(--darkerColor);
 
 			height: 600px;
 
@@ -108,7 +125,7 @@
 
 			/*background-color: #242;*/
 
-			background-image: url('iphoneinhand.png');
+			background-image: url('images/iphoneinhand.png');
 			background-repeat: no-repeat;
 			background-position: bottom left;
 			background-size: contain;
@@ -121,12 +138,12 @@
 
 
 		a {
-			color: #a6a6a6!important;
+			color: var(--mediumColor)!important;
 			text-decoration: none!important;
 		}
 
 		hr {
-			background-color: #444444;
+			background-color: var(--darkerColor);
 			border: none;
 			height: 1px;
 		}
@@ -218,10 +235,10 @@
 	<div>1984 Redux</div>
 	<div class="spacer"></div>
 	<div id="titleicons">
-		<div class="icon" style='background-image: url("iPod.png");'></div>
-		<div class="icon" style='background-image: url("Phone.png");'></div>
-		<div class="icon" style='background-image: url("Safari.png");'></div>
-		<div class="icon" style='background-image: url("FieldTest.png");'></div>
+		<div class="icon" style='background-image: url("icons/iPod.png");'></div>
+		<div class="icon" style='background-image: url("icons/Phone.png");'></div>
+		<div class="icon" style='background-image: url("icons/Safari.png");'></div>
+		<div class="icon" style='background-image: url("icons/FieldTest.png");'></div>
 	</div>
 </div>
 <div class="mainMargin" id="main">
@@ -231,7 +248,7 @@
 
 		<h3>Introducing 1984 Redux</h3>
 		<p>
-			This is an extensive rework of the original "1984" summerboard theme for iPhone OS 1 by Chris Reiff (Mr_Sparkle). It's a <i>gorgeous</i> 1-bit theme designed to make your iPhone 2G or iPod Touch 1G look like a Macintosh from 1984!
+			This is an extensive rework of the original "1984" summerboard theme for iPhone OS 1 by Chris Reiff ("Mr_Sparkle"). It's a <i>gorgeous</i> 1-bit theme designed to make your iPhone 2G or iPod Touch 1G look like a Macintosh from 1984!
 		</p>
 
 		<p>
@@ -243,21 +260,21 @@
 		</p>
 
 		<div id="links">
-			<a class="linkArea" draggable="false" target="_blank" href="files/other/1984%20Redux%20Theme%20v1.0.zip">
-				<div class="icon" style='background-image: url("Installer.png");'></div>
+			<a class="linkArea" draggable="false" target="_blank" href="files/1984%20Redux%20Theme%20v1.01.zip">
+				<div class="icon" style='background-image: url("icons/Installer.png");'></div>
 				Download the Theme
 			</a>
 
-			<!--
+
 			<a class="linkArea" draggable="false" href="../">
-				<div class="icon" style='background-image: url("iTunes.png");'></div>
-				Return to the Downloads Page
+				<div class="icon" style='background-image: url("icons/iTunes.png");'></div>
+				Return to Main Downloads Page
 			</a>
 
-
+			<!--
 			<a class="linkArea" draggable="false" href="../../">
-				<div class="icon" style='background-image: url("Sketches.png");'></div>
-				Return to My Homepage
+				<div class="icon" style='background-image: url("icons/Sketches.png");'></div>
+				Return to My Homepage ⮕
 			</a>
 			-->
 		</div>
@@ -265,20 +282,28 @@
 		<br>
 		<hr>
 		<div id="bottomLinks">
-			<a draggable="false" href="../">
-				Return to the Downloads Page
-			</a>
 
+			<!--
+			<a draggable="false" href="../">
+				Return to the Downloads Page &#9656;
+			</a>
+			-->
 
 			<a draggable="false" href="../../">
-				Return to My Homepage
+				Andrew Yaros's Homepage &#9656;
 			</a>
+
+			<a draggable="false" target="_blank" href="https://bsky.app/profile/lisagui.com">
+				Bluesky Page &#9656;
+			</a>
+
+
 		</div>
 
 	</div>
 </div>
 <div class="mainMargin" id="footer">
-
-</div>
+	<div class="sosumi">&copy;&nbsp;2023-<span id="date">2025</span> Andrew Yaros except where noted. All rights reserved except for pretty much everything here since this theme and site contain tons of trademarks from all over the place, many from Apple, and those trademarks are property of their owners. This site not associated with Apple Inc. </div>
+</div> <script>document.getElementById('date').innerText = new Date().getFullYear()</script>
 </body>
 </html>
