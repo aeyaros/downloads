@@ -385,28 +385,24 @@ a {
 
 
 /* Menu Bar */
-/* outer container - vertically align the inner container */
+
 #topMenuBar {
 	width: 100%;
 	background-color: var(--hi);
 	height: var(--lengthMenuBarHeight);
-	display: flex;
-	align-items: flex-end;
-	box-shadow: 0 calc(-1px * var(--integerScaling)) 0 var(--lo) inset;
-}
 
-/* inner container - used to align menu items by baseline */
-#topMenuItems {
-	width: 100%;
 	display: flex;
 	justify-content: space-between;
-	align-items: baseline !important;
+	align-items: center !important;
 	flex-wrap: nowrap;
-	max-height: var(--lengthMenuBarHeight);
+
+	box-shadow: 0 calc(-1px * var(--integerScaling)) 0 var(--lo) inset;
 	overflow-y: hidden;
 }
 
 .menu {
+	height: 100%;
+	line-height: var(--lengthMenuBarHeight);
 	color: var(--lo);
 	padding: var(--lengthLineThickness) 0 var(--lengthLineThickness) 0;
 	margin-right: var(--lengthMenuBarTitleMargin);
@@ -415,9 +411,7 @@ a {
 	text-decoration: none;
 }
 
-.menuButton {
-	cursor: pointer!important;
-}
+.menuButton { cursor: pointer!important; }
 
 #appleMenu {
 	margin-left: var(--lengthAppleMenuLogoMargin);

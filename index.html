@@ -55,26 +55,24 @@
 		<div class="screencorner" id="screencorner_lower_right"></div>
 
 		<div class="fontSystem" id="topMenuBar">
-			<div id="topMenuItems">
-				<div id="appleMenu" class="menu">
-					<svg id="appleLogo" viewBox="0 0 9 11">
-						<polyline points="7 0 5 0 5 1 4 1 4 3 5 3 5 2 6 2 6 1 7 1"/>
-						<polyline points="4 3 1 3 1 4 0 4 0 9 1 9 1 10 2 10 2 11 4 11 4 10 5 10 5 11 7 11 7 10 8 10 8 9 9 9 9 7 7 7 7 5 9 5 9 4 8 4 8 3 5 3 5 4 4 4"/>
-					</svg>
-				</div>
-				<a class="menu textMenu" href="../">Andrew's</a>
-				<div class="menu textMenu">Vintage</div>
-				<div class="menu textMenu">Apple</div>
-				<div class="menu textMenu">Downloads</div>
+			<div id="appleMenu" class="menu">
+				<svg id="appleLogo" viewBox="0 0 9 11">
+					<polyline points="7 0 5 0 5 1 4 1 4 3 5 3 5 2 6 2 6 1 7 1"/>
+					<polyline points="4 3 1 3 1 4 0 4 0 9 1 9 1 10 2 10 2 11 4 11 4 10 5 10 5 11 7 11 7 10 8 10 8 9 9 9 9 7 7 7 7 5 9 5 9 4 8 4 8 3 5 3 5 4 4 4"/>
+				</svg>
 			</div>
+			<a class="menu" href="../">Andrew's</a>
+			<div class="menu">Vintage</div>
+			<div class="menu">Apple</div>
+			<div class="menu">Downloads</div>
 		</div>
 		<script>
-			const menuItems = document.getElementById('topMenuItems'),
+			const menuItems = document.getElementById('topMenuBar'),
 				spacer = document.createElement('div'),
 				scaleToggle = document.createElement('div');
 
 			spacer.setAttribute('class', 'spacer');
-			scaleToggle.setAttribute('class', 'menu textMenu menuButton');
+			scaleToggle.setAttribute('class', 'menu menuButton');
 			scaleToggle.setAttribute('id', 'stateButton');
 			scaleToggle.innerText = 'Use 2x scale';
 			menuItems.append(spacer, scaleToggle);
