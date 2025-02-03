@@ -14,12 +14,10 @@ body {
 	background-color: black!important;
 	color: white!important;
 	margin: 0!important;
-
-	font-variant-caps: normal;
-	font-weight: 400;
+	font-weight: normal;
 	font-size: 12px;
-	line-height: 1.5em;
-	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans Geneva", "Arial", "Verdana", sans-serif;
+	line-height: 1.75em;
+	font-family: "Lucida Grande", /*"Lucida Sans Unicode", "Lucida Sans Geneva",*/ "Arial", "Verdana", sans-serif;
 }
 
 /*
