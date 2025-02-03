@@ -125,6 +125,40 @@
 
 			scaleToggle.onclick = toggleState;
 			updateState(loadState());
+
+			/* menu bar clock */
+
+			const clockMenu = document.createElement('div'), useAMPM = true, delimiter = ' : '; //     
+			clockMenu.setAttribute('class', 'menu');
+			menuItems.append(clockMenu);
+
+			//get the time
+			const timeString = () => {
+				const date = new Date(), hour = date.getHours();
+
+				let pmHr = hour % 12, suffix = '';
+				if(useAMPM) {
+					if(pmHr === 0) pmHr = 12;
+					suffix = (hour < 12 ? ' AM' : ' PM');
+				}
+
+				let hr = String(useAMPM ? pmHr : hour).padStart(2, '0'),
+					min = String(date.getMinutes()).padStart(2, '0'),
+					sec = String(date.getSeconds()).padStart(2, '0');
+
+				return hr + delimiter + min + delimiter + sec + suffix;
+			};
+
+			//set the time
+			const tickClock = () => {
+				clockMenu.innerText = timeString();
+				setTimeout(() => {
+					window.requestAnimationFrame(tickClock);
+				}, 500);
+			};
+
+			window.requestAnimationFrame(tickClock);
+
 		</script>
 		<div id="desktop">
 			<!-- Start of desktop -->
