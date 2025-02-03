@@ -47,6 +47,14 @@ p { margin-bottom: 1.1em; }
 	src: url("fonts/AppleGaramond.ttf");
 }
 
+.noselect, .noselect * {
+	user-select: none!important;
+	-ms-user-select: none;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	pointer-events: none!important;
+}
+
 #titlebar {
 	height: 100px;
 
