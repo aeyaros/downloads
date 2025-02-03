@@ -402,6 +402,8 @@ a {
 	justify-content: space-between;
 	align-items: baseline !important;
 	flex-wrap: nowrap;
+	max-height: var(--lengthMenuBarHeight);
+	overflow-y: hidden;
 }
 
 .menu {

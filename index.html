@@ -76,7 +76,7 @@
 			spacer.setAttribute('class', 'spacer');
 			scaleToggle.setAttribute('class', 'menu textMenu menuButton');
 			scaleToggle.setAttribute('id', 'stateButton');
-			scaleToggle.innerText = 'Use 2x scale';
+			scaleToggle.innerText = 'Use 2x scale';
 			menuItems.append(spacer, scaleToggle);
 
 			const scaleProperty = 'largeScale';
@@ -108,7 +108,7 @@
 				updateState = (useLarge) => {
 					const scaleFactor = useLarge ? '2' : '1', toggleLabel = useLarge ? '1x' : '2x';
 					document.documentElement.style.setProperty('--integerScaling', scaleFactor); //change the scale
-					scaleToggle.innerText = 'Use ' + toggleLabel + ' scale'; //indicate next click will use the other scale
+					scaleToggle.innerText = 'Use ' + toggleLabel + ' scale'; //indicate next click will use the other scale
 				},
 
 				//toggle the state
@@ -124,7 +124,6 @@
 			};
 
 			scaleToggle.onclick = toggleState;
-
 			updateState(loadState());
 		</script>
 		<div id="desktop">
