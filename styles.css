@@ -78,7 +78,7 @@
 /* override scale state at small widths and heights */
 @media (max-width: 1024px) or (max-height: 684px) {
 	:root { --integerScaling: 1!important; }
-	#stateButton { color: gray; text-decoration: line-through; }
+	#stateButton { display: none; color: gray; text-decoration: line-through; }
 }
 
 
