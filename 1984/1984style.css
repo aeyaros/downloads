@@ -18,7 +18,7 @@ body {
 	font-variant-caps: normal;
 	font-weight: 400;
 	font-size: 12px;
-	line-height: 18px;
+	line-height: 1.5em;
 	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans Geneva", "Arial", "Verdana", sans-serif;
 }
 
@@ -122,6 +122,7 @@ p { margin-bottom: 1.1em; }
 .subtitle {
 	font-size: 22px;
 	margin-bottom: 1em;
+	line-height: 1em;
 }
 
 hr {
