@@ -4,7 +4,7 @@
  *********************************/
 
 :root {
-	--imageWidth: 60%;
+	--imageWidth: 66%;
 	--mediumColor: #a6a6a6;
 	--darkerColor: #333333;
 	color-scheme: only dark!important;
@@ -106,7 +106,7 @@ p { margin-bottom: 1.1em; }
 #main {
 	border: 1px solid var(--darkerColor);
 
-	height: 600px;
+	height: 650px;
 
 	display: flex;
 	flex-flow: row nowrap;
@@ -164,10 +164,16 @@ a:hover, a:active { color: white!important; }
 #links { width: max-content; }
 
 #bottomLinks {
-	margin-top: 10px;
+	border-top: 1px solid var(--darkerColor);
+	padding-top: 10px;
+	margin-top: 20px;
 	display: flex;
 	flex-flow: row wrap;
 	gap: 8px 32px;
+}
+
+@media (max-width: 950px) {
+	:root { --imageWidth: 60%; }
 }
 
 /* column view at small widths */
