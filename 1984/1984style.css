@@ -24,7 +24,7 @@ body {
 
 #container { padding: 64px; }
 
-p { margin-bottom: 1.5em; }
+p { margin-bottom: 1.1em; }
 
 .icon {
 	width: 32px!important;
@@ -113,7 +113,7 @@ p { margin-bottom: 1.5em; }
 
 .subtitle {
 	font-size: 22px;
-	margin: 1.5em 0;
+	margin-bottom: 1em;
 }
 
 hr {
