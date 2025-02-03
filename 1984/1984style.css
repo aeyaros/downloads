@@ -22,6 +22,18 @@ body {
 	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans Geneva", "Arial", "Verdana", sans-serif;
 }
 
+/*
+::selection {
+	color: black!important;
+	background: white!important;
+}
+
+::-moz-selection {
+	color: black!important;
+	background: white!important;
+}
+*/
+
 #container { padding: 64px; }
 
 p { margin-bottom: 1.1em; }
