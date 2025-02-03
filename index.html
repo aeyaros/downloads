@@ -68,7 +68,65 @@
 				<div class="menu textMenu">Downloads</div>
 			</div>
 		</div>
+		<script>
+			const menuItems = document.getElementById('topMenuItems'),
+				spacer = document.createElement('div'),
+				scaleToggle = document.createElement('div');
 
+			spacer.setAttribute('class', 'spacer');
+			scaleToggle.setAttribute('class', 'menu textMenu menuButton');
+			scaleToggle.setAttribute('id', 'stateButton');
+			scaleToggle.innerText = 'Use 2x scale';
+			menuItems.append(spacer, scaleToggle);
+
+			const scaleProperty = 'largeScale';
+
+			//load state value
+			function loadState() {
+				if(sessionStorage) {
+					const stateString = sessionStorage.getItem(scaleProperty);
+					return stateString.localeCompare(true) === 0;
+				}
+
+				else return scaleState;
+			}
+
+			//save state value
+			function saveState(value) {
+				console.log('save', value);
+				if(sessionStorage) sessionStorage.setItem(scaleProperty, (!!value).toString());
+				else scaleState = !!value;
+			}
+
+			let scaleState = false;
+			if(sessionStorage && sessionStorage.getItem(scaleProperty) === null) saveState(false);
+
+			//change scale when menu button clicked
+
+			const
+				//set the state
+				updateState = (useLarge) => {
+					const scaleFactor = useLarge ? '2' : '1', toggleLabel = useLarge ? '1x' : '2x';
+					document.documentElement.style.setProperty('--integerScaling', scaleFactor); //change the scale
+					scaleToggle.innerText = 'Use ' + toggleLabel + ' scale'; //indicate next click will use the other scale
+				},
+
+				//toggle the state
+				toggleState = () => {
+
+					//get/parse state
+					const existingState = loadState(), currentState = !existingState;
+
+					//save state
+					console.log('use large', currentState);
+					saveState(currentState);
+					updateState(currentState);
+			};
+
+			scaleToggle.onclick = toggleState;
+
+			updateState(loadState());
+		</script>
 		<div id="desktop">
 			<!-- Start of desktop -->
 

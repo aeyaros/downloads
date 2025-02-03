@@ -31,7 +31,7 @@
 	/*====== lengths ======*/
 
 	/* all these items should be the same multiple of the original lengths */
-	--integerScaling: 2;
+	--integerScaling: 1;
 
 
 	/* lengths not based on original dimensions */
@@ -75,18 +75,11 @@
 	/*scrollbar-color: var(--lo) var(--hi);*/
 }
 
-@media (max-width: 1024px) {
-	:root {
-		--integerScaling: 1;
-	}
+/* override scale state at small widths and heights */
+@media (max-width: 1024px) or (max-height: 684px) {
+	:root { --integerScaling: 1!important; }
+	#stateButton { color: gray; text-decoration: line-through; }
 }
-
-@media (max-height: 684px) {
-	:root {
-		--integerScaling: 1;
-	}
-}
-
 
 
 /* SCROLLBARS */
@@ -404,7 +397,9 @@ a {
 
 /* inner container - used to align menu items by baseline */
 #topMenuItems {
+	width: 100%;
 	display: flex;
+	justify-content: space-between;
 	align-items: baseline !important;
 	flex-wrap: nowrap;
 }
@@ -418,10 +413,16 @@ a {
 	text-decoration: none;
 }
 
+.menuButton {
+	cursor: pointer!important;
+}
+
 #appleMenu {
 	margin-left: var(--lengthAppleMenuLogoMargin);
 	width: var(--lengthAppleMenuLogoWidth);
 }
+
+.spacer { flex-grow: 1; }
 
 /*when menus are selected, use these styles: */
 
@@ -435,6 +436,8 @@ a {
 	color: var(--hi);
 }
 
+
+/* modules */
 .module {
 	max-width: calc(100% - calc(var(--integerScaling) * 100px));
 	margin: calc(var(--integerScaling) * 40px) auto;
