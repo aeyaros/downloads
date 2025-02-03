@@ -5,14 +5,12 @@
 
 :root {
 	--imageWidth: 60%;
-
 	--mediumColor: #a6a6a6;
 	--darkerColor: #333333;
 	color-scheme: only dark!important;
 }
 
 body {
-
 	background-color: black!important;
 	color: white!important;
 	margin: 0!important;
@@ -24,13 +22,9 @@ body {
 	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans Geneva", "Arial", "Verdana", sans-serif;
 }
 
-#container {
-	padding: 64px;
-}
+#container { padding: 64px; }
 
-p {
-	margin-bottom: 1.5em;
-}
+p { margin-bottom: 1.5em; }
 
 .icon {
 	width: 32px!important;
@@ -66,9 +60,7 @@ p {
 	gap: 10px;
 }
 
-.spacer {
-	flex-grow: 1;
-}
+.spacer { flex-grow: 1; }
 
 #titleicons {
 	display: flex;
@@ -93,7 +85,6 @@ p {
 	text-align: center;
 }
 
-
 #main {
 	border: 1px solid var(--darkerColor);
 
@@ -102,15 +93,12 @@ p {
 	display: flex;
 	flex-flow: row nowrap;
 	justify-content: space-between;
-
 }
 
 #main, #mainImage { border-radius: 16px; }
 
 #mainImage {
 	width: var(--imageWidth);
-
-	/*background-color: #242;*/
 
 	background-image: url('images/iphoneinhand.png');
 	background-repeat: no-repeat;
@@ -128,12 +116,6 @@ p {
 	margin: 1.5em 0;
 }
 
-
-a {
-	color: var(--mediumColor)!important;
-	text-decoration: none!important;
-}
-
 hr {
 	background-color: var(--darkerColor);
 	border: none;
@@ -147,25 +129,20 @@ hr {
 	gap: 10px;
 	margin-bottom: 10px;
 
-
-
 	font-weight: bold;
 	font-size: 15px;
-
-	/*background-color: green;*/
 }
 
-a, a * {
-	cursor: pointer!important;
+a {
+	color: var(--mediumColor)!important;
+	text-decoration: none!important;
 }
 
-a:hover, a:active {
-	color: white!important;
-}
+a, a * { cursor: pointer!important; }
 
-#links {
-	width: max-content;
-}
+a:hover, a:active { color: white!important; }
+
+#links { width: max-content; }
 
 #bottomLinks {
 	margin-top: 10px;
@@ -198,25 +175,16 @@ a:hover, a:active {
 		align-items: center;
 	}
 
-	#bottomLinks {
-		margin-bottom: 32px;
-	}
+	#bottomLinks { margin-bottom: 32px; }
 }
 
 /* less margin at smaller widths */
 @media (max-width: 600px) {
-	#container {
-		padding: 32px;
-	}
+	#container { padding: 32px; }
 }
 
 /* important adjustments for tiny widths */
 @media (max-width: 384px) {
-	#container {
-		padding: 8px;
-	}
-
-	#links {
-		width: 100%;
-	}
+	#container { padding: 8px; }
+	#links { width: 100%; }
 }
