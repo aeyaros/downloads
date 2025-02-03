@@ -78,13 +78,13 @@ p { margin-bottom: 1.1em; }
 }
 
 #footer {
-	height: 169px;
-
+	padding: 40px 0;
+	max-width: 555px;
+	
 	display: flex;
 	flex-flow: row nowrap;
 	justify-content: center;
 	align-items: center;
-	max-width: 555px;
 }
 
 .sosumi {
@@ -191,11 +191,23 @@ a:hover, a:active { color: white!important; }
 @media (max-width: 600px) {
 	#container { padding: 32px; }
 	#titlebar { height: 84px; }
-	#titleicons { max-width: 84px; }
+	#titleicons {
+		min-width: 84px;
+		max-width: 84px;
+	}
 }
 
 /* important adjustments for tiny widths */
 @media (max-width: 384px) {
 	#container { padding: 8px; }
 	#links { width: 100%; }
+}
+
+@media (max-width: 210px) {
+	#titlebar {
+		justify-content: center;
+		text-align: center;
+	}
+	#titleicons { display: none; }
+	.spacer { display: none; }
 }
