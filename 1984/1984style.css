@@ -56,12 +56,12 @@ p { margin-bottom: 1.1em; }
 }
 
 #titlebar {
-	height: 100px;
+	height: 50px;
 
 	font-family: 'Apple Garamond', "Adobe Garamond", serif;
 	font-size: 36px;
 	line-height: 1em;
-
+	padding-bottom: 10px;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -78,7 +78,7 @@ p { margin-bottom: 1.1em; }
 }
 
 #footer {
-	height: 200px;
+	height: 169px;
 
 	display: flex;
 	flex-flow: row nowrap;
