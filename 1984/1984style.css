@@ -190,6 +190,8 @@ a:hover, a:active { color: white!important; }
 /* less margin at smaller widths */
 @media (max-width: 600px) {
 	#container { padding: 32px; }
+	#titlebar { height: 84px; }
+	#titleicons { max-width: 84px; }
 }
 
 /* important adjustments for tiny widths */
