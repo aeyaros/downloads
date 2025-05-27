@@ -24,6 +24,20 @@
 	|*                                                                   *|
 	\*********************************************************************/
 }
+@font-face {
+	font-family: "Text Font";
+	src: url("./system/fonts/FindersKeepers.ttf");
+	size-adjust: 177.7777777778%;
+
+	/*********************************************************************\
+	|*                                                                   *|
+	|*  Font credit: FindersKeepers font created by Giles Booth          *|
+	|*                                                                   *|
+	|*  http://www.suppertime.co.uk/blogmywiki/2017/04/finderskeepers/   *|
+	|*  https://www.pentacom.jp/pentacom/bitfontmaker2/gallery/?id=3809  *|
+	|*                                                                   *|
+	\*********************************************************************/
+}
 
 /* VARIABLES */
 :root {
@@ -44,8 +58,9 @@
 	--LengthBackgroundTile: calc(var(--integerScaling) * 8px);
 	--lengthScreenCorner: calc(var(--integerScaling) * 5px);
 
-
+	/* Font sizes */
 	--lengthSystemFontSize: calc(var(--integerScaling) * 16px);
+	--lengthTextFontSize: calc(var(--integerScaling) * 9px);
 
 	--lengthScrollbarThickness: calc(var(--integerScaling) * 16px);
 	--lengthScrollbarButtonInnerElement: calc(var(--integerScaling) * 14px);
@@ -383,6 +398,12 @@ a {
 	font-size: var(--lengthSystemFontSize);
 }
 
+.fontText {
+	font-family: "Text Font", FindersKeepers, Geneva, "Arial", sans-serif;
+	font-size: var(--lengthTextFontSize);
+	line-height: 1.5em;
+}
+
 
 /* Menu Bar */
 
@@ -484,7 +505,9 @@ a {
 	display: inline-block;
 	padding: .2em .5em;
 	border-radius: .4em;
-	border: calc(var(--integerScaling) * 1.5px) solid var(--lo);
+	border: calc(var(--integerScaling) * 1px) solid var(--lo);
+	/*outline-style: double;*/
+	/*outline-width: calc(var(--integerScaling) * 3px);*/
 	user-select: none!important;
 	color: var(--lo);
 	background-color: var(--hi);
@@ -492,6 +515,7 @@ a {
 	cursor: pointer!important;
 	margin-right: calc(var(--integerScaling) * 15px);
 	margin-bottom: calc(var(--integerScaling) * 8px);
+	line-height: 1.125em;
 }
 
 .button:active {
