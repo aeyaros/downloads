@@ -10,9 +10,12 @@
 	color-scheme: only dark!important;
 }
 
-body {
+html, body {
 	background-color: black!important;
 	color: white!important;
+}
+
+body {
 	margin: 0!important;
 	font-weight: normal;
 	font-size: 12px;
