@@ -517,7 +517,7 @@ a {
 }
 
 .fixedButton {
-	display: inline-block;
+	display: inline-block!important;
 	width: calc(var(--integerScaling) * 160px) !important;
 	height: calc(var(--integerScaling) * 28px) !important;
 
@@ -545,6 +545,10 @@ a {
 .fixedButton:active {
 	/*font-weight: unset;*/
 	filter: invert(1);
+}
+
+.buttonContainer {
+	text-align: center;
 }
 
 /*
