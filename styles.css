@@ -414,6 +414,10 @@ a {
 	line-height: 1.5em;
 }
 
+.shortcut, .shortcut * {
+	cursor: alias!important;
+}
+
 
 /* Menu Bar */
 
@@ -452,12 +456,13 @@ a {
 .spacer { flex-grow: 1; }
 
 /*when menus are selected, use these styles: */
-
+/*
 #appleMenu:hover polyline {
 	fill: var(--hi) !important;
 }
+*/
 
-.menu:hover {
+.selectableMenu:hover {
 	box-shadow: var(--lengthMenuBarSelectionPadding) 0 var(--lo), var(--lengthMenuBarSelectionPaddingNegative) 0 var(--lo), 4px 0 var(--lo), -4px 0 var(--lo);
 	background-color: var(--lo);
 	color: var(--hi);
@@ -511,13 +516,46 @@ a {
 	border: calc(1px * var(--integerScaling)) solid black;
 }
 
+.fixedButton {
+	display: inline-block;
+	width: calc(var(--integerScaling) * 160px) !important;
+	height: calc(var(--integerScaling) * 28px) !important;
+
+	background-image: url('./button.svg');
+	background-repeat: no-repeat!important;
+	background-size: cover!important;
+	image-rendering: pixelated;
+	
+	color: var(--lo);
+	cursor: pointer!important;
+	text-align: center!important;
+	text-decoration: none!important;
+	user-select: none!important;
+	
+	margin-right: calc(var(--integerScaling) * 15px);
+	margin-bottom: calc(var(--integerScaling) * 8px);
+	line-height: 1.75em;
+}
+
+.fixedButton:hover {
+	/*font-style: italic;*/
+	/*font-weight: bolder;*/
+}
+
+.fixedButton:active {
+	/*font-weight: unset;*/
+	filter: invert(1);
+}
+
+/*
+
 .button {
 	display: inline-block;
-	padding: .2em .5em;
+	padding: calc(var(--integerScaling) * 4px) calc(var(--integerScaling) * 10px);
 	border-radius: .4em;
 	border: calc(var(--integerScaling) * 1px) solid var(--lo);
-	/*outline-style: double;*/
-	/*outline-width: calc(var(--integerScaling) * 3px);*/
+	!*outline-style: double;*!
+	!*outline-width: calc(var(--integerScaling) * 3px);*!
 	user-select: none!important;
 	color: var(--lo);
 	background-color: var(--hi);
@@ -528,8 +566,14 @@ a {
 	line-height: 1.125em;
 }
 
+.button:hover, .button:active {
+	border: calc(var(--integerScaling) * 2px) solid var(--lo);
+	padding: calc(var(--integerScaling) * 3px) calc(var(--integerScaling) * 9px);
+}
+
 .button:active {
 	border-color: var(--hi);
 	color: var(--hi);
 	background-color: var(--lo);
 }
+*/
