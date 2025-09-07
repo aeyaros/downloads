@@ -98,8 +98,8 @@
 				else scaleState = !!value;
 			}
 
-			let scaleState = false;
-			if(sessionStorage && sessionStorage.getItem(scaleProperty) === null) saveState(false);
+			let scaleState = true;
+			if(sessionStorage && sessionStorage.getItem(scaleProperty) === null) saveState(true);
 
 			//change scale when menu button clicked
 
