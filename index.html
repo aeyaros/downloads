@@ -65,19 +65,18 @@
 			</div>
 			<div class="menu">Andrew's&nbsp;Downloads</div>
 			<a class="menu selectableMenu" href="../">Homepage</a>
-			<a class="menu selectableMenu" href="./1984/">1984 Theme</a>
+			<a class="menu selectableMenu" href="./1984/">1984&nbsp;Theme</a>
 			<a class="menu selectableMenu shortcut" href="https://lisagui.com" target="_blank">LisaGUI</a>
+			<div class="spacer"></div>
 		</div>
 		<script>
 			const menuItems = document.getElementById('topMenuBar'),
-				spacer = document.createElement('div'),
 				scaleToggle = document.createElement('div');
 
-			spacer.setAttribute('class', 'spacer');
 			scaleToggle.setAttribute('class', 'menu menuButton');
 			scaleToggle.setAttribute('id', 'stateButton');
 			scaleToggle.innerText = 'Use 2x scale';
-			menuItems.append(spacer, scaleToggle);
+			menuItems.append(scaleToggle);
 
 			const scaleProperty = 'largeScale';
 
@@ -130,6 +129,7 @@
 
 			const clockMenu = document.createElement('div'), useAMPM = true, delimiter = ':'; //     
 			clockMenu.setAttribute('class', 'menu');
+			clockMenu.setAttribute('id', 'clock');
 			menuItems.append(clockMenu);
 
 			//get the time
@@ -142,7 +142,7 @@
 					suffix = (hour < 12 ? ' AM' : ' PM');
 				}
 
-				let hr = String(useAMPM ? pmHr : hour).padStart(2, '0'),
+				let hr = String(useAMPM ? pmHr : hour)/*.padStart(2, '0')*/,
 					min = String(date.getMinutes()).padStart(2, '0'),
 					sec = String(date.getSeconds()).padStart(2, '0');
 

@@ -422,25 +422,59 @@ a {
 /* Menu Bar */
 
 #topMenuBar {
-	width: 100%;
+	width: calc(100% - (2 * var(--lengthMenuBarTitleMargin)));
+	padding: 0 var(--lengthMenuBarTitleMargin);
 	background-color: var(--hi);
-	height: var(--lengthMenuBarHeight);
 
 	display: flex;
-	justify-content: space-between;
+	justify-content: flex-start;
 	align-items: center !important;
-	flex-wrap: nowrap;
+	align-content: center;
+	flex-wrap: wrap!important;
 
 	box-shadow: 0 calc(-1px * var(--integerScaling)) 0 var(--lo) inset;
-	overflow-y: hidden;
+	overflow: hidden;
+}
+
+#topMenuBar > * {
+	height: var(--lengthMenuBarHeight) !important;
+	line-height: var(--lengthMenuBarHeight);
+	padding: var(--lengthLineThickness) 0 var(--lengthLineThickness) 0;
+	margin-right: var(--lengthMenuBarTitleMargin);
+}
+
+#topMenuBar > *:first-child {
+	margin-left: 0;
+}
+
+#topMenuBar > *:last-child {
+	margin-right: 0;
+}
+
+#clock {
+	width: calc(var(--integerScaling) * 100px);
+	text-align: right!important;
+	
+}
+
+@media (max-width: 500px) {
+	#topMenuBar {
+		padding: var(--lengthMenuBarTitleMargin);
+	}
+	
+	.spacer {
+		display: none;
+	}
+	
+	#clock {
+		text-align: left!important;
+	}
 }
 
 .menu {
-	height: 100%;
-	line-height: var(--lengthMenuBarHeight);
+	/*background-color: red;*/
+	/*height: 100%;*/
 	color: var(--lo);
-	padding: var(--lengthLineThickness) 0 var(--lengthLineThickness) 0;
-	margin-right: var(--lengthMenuBarTitleMargin);
 	border: 0;
 	cursor: default;
 	text-decoration: none;
