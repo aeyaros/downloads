@@ -555,7 +555,7 @@ a {
 	width: calc(var(--integerScaling) * 160px) !important;
 	height: calc(var(--integerScaling) * 28px) !important;
 
-	background-image: url('./button.svg');
+	background-image: url('./system/svg/button.svg');
 	background-repeat: no-repeat!important;
 	background-size: cover!important;
 	image-rendering: pixelated;
@@ -578,7 +578,9 @@ a {
 
 .fixedButton:active {
 	/*font-weight: unset;*/
-	filter: invert(1);
+	color: var(--hi);
+	background-image: url('./system/svg/button_pressed.svg');
+	
 }
 
 .buttonContainer {
