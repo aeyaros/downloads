@@ -47,6 +47,7 @@ p { margin-bottom: 1.1em; }
 	background-size: contain;
 	background-repeat: no-repeat;
 	background-position: center;
+	image-rendering: pixelated!important;
 }
 
 .mainMargin {
