@@ -96,7 +96,6 @@
 	#stateButton { display: none; color: gray; text-decoration: line-through; }
 }
 
-
 /* SCROLLBARS */
 
 .window {
@@ -452,9 +451,9 @@ a {
 }
 
 #clock {
-	width: calc(var(--integerScaling) * 100px);
+	/*min-width: calc(var(--integerScaling) * 85px);*/
+	/*min-width: 11ch;*/
 	text-align: right!important;
-	
 }
 
 @media (max-width: 500px) {
@@ -489,12 +488,13 @@ a {
 
 .spacer { flex-grow: 1; }
 
+#appleMenu polyline {
+	fill: var(--lo) !important;
+}
 /*when menus are selected, use these styles: */
-/*
 #appleMenu:hover polyline {
 	fill: var(--hi) !important;
 }
-*/
 
 .selectableMenu:hover {
 	box-shadow: var(--lengthMenuBarSelectionPadding) 0 var(--lo), var(--lengthMenuBarSelectionPaddingNegative) 0 var(--lo), 4px 0 var(--lo), -4px 0 var(--lo);

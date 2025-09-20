@@ -57,15 +57,15 @@
 		<div class="screencorner" id="screencorner_lower_right"></div>
 
 		<div class="fontSystem" id="topMenuBar">
-			<div id="appleMenu" class="menu">
+			<a id="appleMenu" class="menu selectableMenu" href="../">
 				<svg id="appleLogo" viewBox="0 0 9 11">
 					<polyline points="7 0 5 0 5 1 4 1 4 3 5 3 5 2 6 2 6 1 7 1"/>
 					<polyline points="4 3 1 3 1 4 0 4 0 9 1 9 1 10 2 10 2 11 4 11 4 10 5 10 5 11 7 11 7 10 8 10 8 9 9 9 9 7 7 7 7 5 9 5 9 4 8 4 8 3 5 3 5 4 4 4"/>
 				</svg>
-			</div>
+			</a>
 			<div class="menu">Andrew's&nbsp;Downloads</div>
-			<a class="menu selectableMenu" href="../">Homepage</a>
-			<a class="menu selectableMenu" href="./1984/">1984&nbsp;Theme</a>
+			<!--<a class="menu selectableMenu" href="../">Home</a>-->
+			<a class="menu selectableMenu" href="./1984/">1984</a>
 			<a class="menu selectableMenu shortcut" href="https://lisagui.com" target="_blank">LisaGUI</a>
 			<div class="spacer"></div>
 		</div>
@@ -73,7 +73,7 @@
 			const menuItems = document.getElementById('topMenuBar'),
 				scaleToggle = document.createElement('div');
 
-			scaleToggle.setAttribute('class', 'menu menuButton');
+			scaleToggle.setAttribute('class', 'menu menuButton selectableMenu');
 			scaleToggle.setAttribute('id', 'stateButton');
 			scaleToggle.innerText = 'Use 2x scale';
 			menuItems.append(scaleToggle);
@@ -107,7 +107,7 @@
 				updateState = (useLarge) => {
 					const scaleFactor = useLarge ? '2' : '1', toggleLabel = useLarge ? '1x' : '2x';
 					document.documentElement.style.setProperty('--integerScaling', scaleFactor); //change the scale
-					scaleToggle.innerText = 'Use ' + toggleLabel + ' scale'; //indicate next click will use the other scale
+					scaleToggle.innerText = `Use ${toggleLabel}`; //indicate next click will use the other scale
 				},
 
 				//toggle the state
@@ -139,10 +139,10 @@
 				let pmHr = hour % 12, suffix = '';
 				if(useAMPM) {
 					if(pmHr === 0) pmHr = 12;
-					suffix = (hour < 12 ? ' AM' : ' PM');
+					suffix = (hour < 12 ? ' AM' : ' PM');
 				}
 
-				let hr = String(useAMPM ? pmHr : hour)/*.padStart(2, '0')*/,
+				let hr = String(useAMPM ? pmHr : hour).padStart(2, ' '),
 					min = String(date.getMinutes()).padStart(2, '0'),
 					sec = String(date.getSeconds()).padStart(2, '0');
 
