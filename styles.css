@@ -587,6 +587,11 @@ a {
 	text-align: center;
 }
 
+.windowLink {
+	width: 1px!important;
+	height: 1px!important;
+}
+
 /*
 
 .button {
