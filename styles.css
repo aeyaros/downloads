@@ -506,7 +506,7 @@ a {
 /* modules */
 .module {
 	max-width: calc(100% - calc(var(--integerScaling) * 100px));
-	margin: calc(var(--integerScaling) * 40px) auto;
+	margin: calc(var(--integerScaling) * 8px) auto calc(var(--integerScaling) * 40px);
 }
 
 @media (max-width: 444px) {
@@ -517,7 +517,7 @@ a {
 
 @media (max-height: 444px) {
 	.module {
-		margin: calc(var(--integerScaling) * 20px) auto;
+		margin: calc(var(--integerScaling) * 8px) auto calc(var(--integerScaling) * 20px);
 	}
 }
 
