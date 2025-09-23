@@ -548,6 +548,7 @@ a {
 	background-color: var(--lo);
 	pointer-events: none!important;
 	border: calc(1px * var(--integerScaling)) solid black;
+	image-rendering: smooth;
 }
 
 .fixedButton {
