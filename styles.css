@@ -292,6 +292,14 @@ body {
 	margin: 0;
 }
 
+ul {
+	padding-inline-start: 3em;
+}
+
+li {
+	list-style-type: square;
+}
+
 /* Disable font and image smoothing everywhere */
 * {
 	font-smooth: never;
@@ -462,6 +470,16 @@ a {
 	display: none;
 }
 
+@media (max-width: 270px) {
+	#clock {
+		display: none;
+	}
+	
+	.spacer {
+		display: none;
+	}
+}
+
 @media (max-width: 500px) {
 	
 	#topMenuBar {
@@ -526,9 +544,9 @@ a {
 	fill: var(--lo) !important;
 }
 /*when menus are selected, use these styles: */
-#appleMenu:hover polyline {
+/*#appleMenu:hover polyline {
 	fill: var(--hi) !important;
-}
+}*/
 
 .selectableMenu:hover {
 	box-shadow: var(--lengthMenuBarSelectionPadding) 0 var(--lo), var(--lengthMenuBarSelectionPaddingNegative) 0 var(--lo), 4px 0 var(--lo), -4px 0 var(--lo);
@@ -620,40 +638,10 @@ a {
 
 .buttonContainer {
 	text-align: center;
+	margin: 1.5em 0 calc(1.5em - (var(--integerScaling) * 8px));
 }
 
 .windowLink {
 	width: 1px!important;
 	height: 1px!important;
 }
-
-/*
-
-.button {
-	display: inline-block;
-	padding: calc(var(--integerScaling) * 4px) calc(var(--integerScaling) * 10px);
-	border-radius: .4em;
-	border: calc(var(--integerScaling) * 1px) solid var(--lo);
-	!*outline-style: double;*!
-	!*outline-width: calc(var(--integerScaling) * 3px);*!
-	user-select: none!important;
-	color: var(--lo);
-	background-color: var(--hi);
-	text-decoration: none!important;
-	cursor: pointer!important;
-	margin-right: calc(var(--integerScaling) * 15px);
-	margin-bottom: calc(var(--integerScaling) * 8px);
-	line-height: 1.125em;
-}
-
-.button:hover, .button:active {
-	border: calc(var(--integerScaling) * 2px) solid var(--lo);
-	padding: calc(var(--integerScaling) * 3px) calc(var(--integerScaling) * 9px);
-}
-
-.button:active {
-	border-color: var(--hi);
-	color: var(--hi);
-	background-color: var(--lo);
-}
-*/
