@@ -13,30 +13,28 @@
 /* FONTS */
 @font-face {
 	font-family: "System Font";
-	src: url("./system/fonts/ChiKareGo2.ttf")
-
-	/*********************************************************************\
-	|*                                                                   *|
-	|*  Font credit: ChiKareGo2 font created by Giles Booth              *|
-	|*                                                                   *|
-	|*  http://www.suppertime.co.uk/blogmywiki/2017/04/chicago/          *|
-	|*  https://www.pentacom.jp/pentacom/bitfontmaker2/gallery/?id=3780  *|
-	|*                                                                   *|
-	\*********************************************************************/
+	src: url("./system/fonts/chicago-12-1.otf")
+	
+	/*************************************************************************\
+	|*                                                                       *|
+	|*  Font credit: Chicago 12.1 font created by "kamekku14"                *|
+	|*                                                                       *|
+	|*  https://fontstruct.com/fontstructions/show/2230457/chicago-12-13-11  *|
+	|*                                                                       *|
+	\*************************************************************************/
 }
 @font-face {
 	font-family: "Text Font";
-	src: url("./system/fonts/FindersKeepers.ttf");
+	src: url("./system/fonts/geneva-9-2.otf");
 	size-adjust: 177.7777777778%;
-
-	/*********************************************************************\
-	|*                                                                   *|
-	|*  Font credit: FindersKeepers font created by Giles Booth          *|
-	|*                                                                   *|
-	|*  http://www.suppertime.co.uk/blogmywiki/2017/04/finderskeepers/   *|
-	|*  https://www.pentacom.jp/pentacom/bitfontmaker2/gallery/?id=3809  *|
-	|*                                                                   *|
-	\*********************************************************************/
+	
+	/*******************************************************************\
+	|*                                                                 *|
+	|*  Font credit: Geneva 9.2 font created by "Techstar01"           *|
+	|*                                                                 *|
+	|*  https://fontstruct.com/fontstructions/show/1744455/geneva-9-2  *|
+	|*                                                                 *|
+	\*******************************************************************/
 }
 
 /* VARIABLES */
