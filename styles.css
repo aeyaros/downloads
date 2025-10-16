@@ -24,7 +24,7 @@
 	\*************************************************************************/
 }
 @font-face {
-	font-family: "Text Font";
+	font-family: "Alt Text Font";
 	src: url("./system/fonts/geneva-9-2.otf");
 	
 	/*******************************************************************\
@@ -37,7 +37,7 @@
 }
 
 @font-face {
-	font-family: "Alt Text Font";
+	font-family: "Text Font";
 	src: url("./system/fonts/chicago-light.otf");
 	
 	/************************************************************************\
@@ -105,9 +105,11 @@
 @media (max-width: 1024px) or (max-height: 684px) {
 	:root {
 		--integerScaling: 1!important;
-		--textFontFamily: "Alt Text Font";
 	}
 	#stateButton { display: none; color: gray; text-decoration: line-through; }
+	.fontText {
+		font-family: 'Text Font', FindersKeepers, Geneva, "Arial", sans-serif!important;
+	}
 }
 
 /* SCROLLBARS */

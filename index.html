@@ -109,6 +109,7 @@
 					const scaleFactor = useLarge ? '2' : '1', toggleLabel = useLarge ? '1x' : '2x';
 					document.documentElement.style.setProperty('--integerScaling', scaleFactor); //change the scale
 					scaleToggle.innerText = `Use ${toggleLabel}`; //indicate next click will use the other scale
+					document.documentElement.style.setProperty('--textFontFamily', `${useLarge ? 'Alt ' : '' }Text Font`)
 				},
 
 				//toggle the state
