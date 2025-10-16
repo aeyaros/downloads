@@ -331,6 +331,12 @@ li {
 	-webkit-text-size-adjust: 150% !important;
 }
 
+/* some elements shouldn't have resized text right now */
+#topMenuBar, #topMenuBar *, .windowTitleBar, .windowTitleBar *, .fixedButton, .fixedButton * {
+	-webkit-text-size-adjust: 100% !important;
+}
+
+
 #monitor {
 	background-color: var(--lo);
 	position: fixed;
