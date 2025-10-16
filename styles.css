@@ -36,6 +36,19 @@
 	\*******************************************************************/
 }
 
+@font-face {
+	font-family: "Alt Text Font";
+	src: url("./system/fonts/chicago-light.otf");
+	
+	/************************************************************************\
+	|*                                                                      *|
+	|*  Font credit: Chicago Light font created by "Techstar01"             *|
+	|*                                                                      *|
+	|*  https://fontstruct.com/fontstructions/show/1793490/chicago-12-13-5  *|
+	|*                                                                      *|
+	\************************************************************************/
+}
+
 /* VARIABLES */
 :root {
 
@@ -58,7 +71,8 @@
 	/* Font sizes */
 	--lengthSystemFontSize: calc(var(--integerScaling) * 16px);
 	--lengthTextFontSize: calc(var(--integerScaling) * 16px);
-
+	--textFontFamily: "Text Font";
+	
 	--lengthScrollbarThickness: calc(var(--integerScaling) * 16px);
 	--lengthScrollbarButtonInnerElement: calc(var(--integerScaling) * 14px);
 	--lengthScrollbarReducedButton: calc(var(--integerScaling) * 15px);
@@ -89,7 +103,10 @@
 
 /* override scale state at small widths and heights */
 @media (max-width: 1024px) or (max-height: 684px) {
-	:root { --integerScaling: 1!important; }
+	:root {
+		--integerScaling: 1!important;
+		--textFontFamily: "Alt Text Font";
+	}
 	#stateButton { display: none; color: gray; text-decoration: line-through; }
 }
 
@@ -302,8 +319,8 @@ li {
 /* Disable font and image smoothing everywhere */
 * {
 	font-smooth: never;
-	-webkit-font-smoothing: none;
-	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: none!important;
+	-moz-osx-font-smoothing: grayscale!important;
 	image-rendering: optimizeSpeed;
 	image-rendering: -moz-crisp-edges;
 	image-rendering: -o-crisp-edges;
@@ -311,7 +328,7 @@ li {
 	image-rendering: pixelated;
 	image-rendering: optimize-contrast;
 	-ms-interpolation-mode: nearest-neighbor;
-	-webkit-text-size-adjust: 135% !important;
+	-webkit-text-size-adjust: 150% !important;
 }
 
 #monitor {
@@ -414,9 +431,9 @@ a {
 }
 
 .fontText {
-	font-family: "Text Font", FindersKeepers, Geneva, "Arial", sans-serif;
+	font-family: var(--textFontFamily), FindersKeepers, Geneva, "Arial", sans-serif;
 	font-size: var(--lengthTextFontSize);
-	line-height: 1.5em;
+	line-height: 1em;
 }
 
 .shortcut, .shortcut * {
