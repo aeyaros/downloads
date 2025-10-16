@@ -26,7 +26,6 @@
 @font-face {
 	font-family: "Text Font";
 	src: url("./system/fonts/geneva-9-2.otf");
-	size-adjust: 177.7777777778%;
 	
 	/*******************************************************************\
 	|*                                                                 *|
@@ -58,7 +57,7 @@
 
 	/* Font sizes */
 	--lengthSystemFontSize: calc(var(--integerScaling) * 16px);
-	--lengthTextFontSize: calc(var(--integerScaling) * 9px);
+	--lengthTextFontSize: calc(var(--integerScaling) * 16px);
 
 	--lengthScrollbarThickness: calc(var(--integerScaling) * 16px);
 	--lengthScrollbarButtonInnerElement: calc(var(--integerScaling) * 14px);
@@ -312,6 +311,7 @@ li {
 	image-rendering: pixelated;
 	image-rendering: optimize-contrast;
 	-ms-interpolation-mode: nearest-neighbor;
+	-webkit-text-size-adjust: 135% !important;
 }
 
 #monitor {
