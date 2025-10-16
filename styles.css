@@ -558,14 +558,21 @@ a {
 
 #appleMenu {
 	margin-left: var(--lengthAppleMenuLogoMargin);
-	width: var(--lengthAppleMenuLogoWidth);
+	width: var(--lengthAppleMenuLogoWidth)!important;
+	height: var(--lengthAppleMenuLogoHeight)!important;
+	background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIGlkPSJhcHBsZUxvZ28iIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmlld0JveD0iMCAwIDkgMTEiPjxwb2x5bGluZSBzdHlsZT0iZmlsbDojMDAwIiBwb2ludHM9IjcgMCA1IDAgNSAxIDQgMSA0IDMgNSAzIDUgMiA2IDIgNiAxIDcgMSIvPjxwb2x5bGluZSBzdHlsZT0iZmlsbDojMDAwIiBwb2ludHM9IjQgMyAxIDMgMSA0IDAgNCAwIDkgMSA5IDEgMTAgMiAxMCAyIDExIDQgMTEgNCAxMCA1IDEwIDUgMTEgNyAxMSA3IDEwIDggMTAgOCA5IDkgOSA5IDcgNyA3IDcgNSA5IDUgOSA0IDggNCA4IDMgNSAzIDUgNCA0IDQiLz48L3N2Zz4=');
+	background-repeat: no-repeat;
+	background-size: var(--lengthAppleMenuLogoWidth) var(--lengthAppleMenuLogoHeight);
 }
 
 .spacer { flex-grow: 1; }
 
+/*
 #appleMenu polyline {
 	fill: var(--lo) !important;
 }
+*/
+
 /*when menus are selected, use these styles: */
 /*#appleMenu:hover polyline {
 	fill: var(--hi) !important;
