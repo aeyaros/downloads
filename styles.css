@@ -67,6 +67,9 @@
 
 	--LengthBackgroundTile: calc(var(--integerScaling) * 8px);
 	--lengthScreenCorner: calc(var(--integerScaling) * 5px);
+	
+	--horiPadding: calc(env(safe-area-inset-left) + env(safe-area-inset-right));
+	--vertPadding: calc(env(safe-area-inset-top) + env(safe-area-inset-bottom));
 
 	/* Font sizes */
 	--lengthSystemFontSize: calc(var(--integerScaling) * 16px);
@@ -364,11 +367,11 @@ li {
 	background-attachment: local;
 
 	position: absolute;
-	top: var(--lengthScreenPadding);
-	left: var(--lengthScreenPadding);
+	top: calc(var(--lengthScreenPadding) + env(safe-area-inset-top));
+	left: calc(var(--lengthScreenPadding) + env(safe-area-inset-left));
 
-	width: calc(100% - (2 * var(--lengthScreenPadding)));
-	height: calc(100% - (2 * var(--lengthScreenPadding)));
+	width:  calc(100% - (2 * var(--lengthScreenPadding)) - var(--horiPadding));
+	height: calc(100% - (2 * var(--lengthScreenPadding)) - var(--vertPadding));
 
 	z-index: 10;
 }
@@ -387,26 +390,26 @@ li {
 }
 
 #screencorner_upper_left {
-	top: 0;/*var(--lengthScreenPadding);*/
-	left: 0;/*var(--lengthScreenPadding);*/
+	top: 0;/*calc(var(--lengthScreenPadding) + env(safe-area-inset-top) );*/
+	left: 0;/*calc(var(--lengthScreenPadding) + env(safe-area-inset-left) );*/
 }
 
 #screencorner_upper_right {
 	transform: rotate(90deg);
-	top: 0;/*var(--lengthScreenPadding);*/
-	right: 0;/*var(--lengthScreenPadding);*/
+	top: 0;/*calc(var(--lengthScreenPadding) + env(safe-area-inset-top) );*/
+	right: 0;/*calc(var(--lengthScreenPadding) + env(safe-area-inset-right) );*/
 }
 
 #screencorner_lower_left {
 	transform: rotate(270deg);
-	bottom: 0;/*var(--lengthScreenPadding);*/
-	left: 0;/*var(--lengthScreenPadding);*/
+	bottom: 0;/*calc(var(--lengthScreenPadding) + env(safe-area-inset-bottom) );*/
+	left: 0;/*calc(var(--lengthScreenPadding) + env(safe-area-inset-left) );*/
 }
 
 #screencorner_lower_right {
 	transform: rotate(180deg);
-	bottom: 0;/*var(--lengthScreenPadding);*/
-	right: 0;/*var(--lengthScreenPadding);*/
+	bottom: 0;/*calc(var(--lengthScreenPadding) + env(safe-area-inset-bottom) );*/
+	right: 0;/*calc(var(--lengthScreenPadding) + env(safe-area-inset-right) );*/
 }
 
 #desktop {
