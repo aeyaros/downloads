@@ -504,6 +504,17 @@ a {
 	}
 }
 
+/* remove and adjust title bar elements at small widths */
+@media (max-width: 315px) {
+	.windowCloseBox, .windowResizeBox {
+		display: none;
+	}
+	
+	.windowTitle {
+		margin: auto;
+	}
+}
+
 @media (max-width: 450px) {
 	
 	#topMenuBar {
