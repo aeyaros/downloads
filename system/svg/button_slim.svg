@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="a" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 96 48">
+  <!-- Generator: Adobe Illustrator 30.0.0, SVG Export Plug-In . SVG Version: 2.1.1 Build 123)  -->
+  <defs>
+    <style>
+      .st0 {
+        fill: #fff;
+      }
+
+      .st0, .st1 {
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path id="b" class="st0" d="M90,2l2,1,1,1,1,2v36l-1,2-1,1-2,1H6l-2-1-1-1-1-2V6l1-2,1-1,2-1h84Z"/>
+  <g id="c">
+    <path id="d" class="st1" d="M4,41h1V7h-1v34Z"/>
+    <path id="e" class="st1" d="M91,41h1V7h-1v34Z"/>
+    <path id="f" class="st1" d="M5,7v-2h2v1h-1v1h-1Z"/>
+    <path id="g" class="st1" d="M5,41v2h2v-1h-1v-1h-1Z"/>
+    <path id="h" class="st1" d="M91,7v-2h-2v1h1v1h1Z"/>
+    <path id="i" class="st1" d="M91,41v2h-2v-1h1v-1h1Z"/>
+    <path id="j" class="st1" d="M7,5h82v-1H7v1Z"/>
+    <path id="k" class="st1" d="M7,44h82v-1H7v1Z"/>
+  </g>
+  <path id="l" class="st1" d="M0,43h-3v8H5v-3H0v-5ZM0,5v38h1v2h1v1h1v1h2v1h86v-1h2v-1h1v-1h1v-2h1V5h-1v-2h-1v-1h-1v-1h-2V0H5v1h-2v1h-1v1h-1v2H0ZM0,5V0h5v-3H-3V5H0ZM91,0v-3h8V5h-3V0h-5ZM96,43h3v8h-8v-3h5v-5ZM4,6h-1v36h1v2h2v1h84v-1h2v-2h1V6h-1v-2h-2v-1H6v1h-2v2Z"/>
+</svg>

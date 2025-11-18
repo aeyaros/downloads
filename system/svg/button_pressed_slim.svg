@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="a" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 96 48">
+  <!-- Generator: Adobe Illustrator 30.0.0, SVG Export Plug-In . SVG Version: 2.1.1 Build 123)  -->
+  <defs>
+    <style>
+      .st0 {
+        fill: #fff;
+      }
+
+      .st0, .st1 {
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path id="b" class="st0" d="M90,2l2,1,1,1,1,2v36l-1,2-1,1-2,1H6l-2-1-1-1-1-2V6l1-2,1-1,2-1h84Z"/>
+  <path id="c" class="st1" d="M0,43h-3v8H5v-3H0v-5ZM0,5v38h1v2h1v1h1v1h2v1h86v-1h2v-1h1v-1h1v-2h1V5h-1v-2h-1v-1h-1v-1h-2V0H5v1h-2v1h-1v1h-1v2H0ZM0,5V0h5v-3H-3V5H0ZM91,0v-3h8V5h-3V0h-5ZM96,43h3v8h-8v-3h5v-5ZM4,6h-1v36h1v2h2v1h84v-1h2v-2h1V6h-1v-2h-2v-1H6v1h-2v2Z"/>
+  <polygon id="d" class="st1" points="5 7 5 41 6 41 6 42 7 42 7 43 89 43 89 42 90 42 90 41 91 41 91 7 90 7 90 6 89 6 89 5 7 5 7 6 6 6 6 7 5 7"/>
+</svg>

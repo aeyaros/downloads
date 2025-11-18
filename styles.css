@@ -122,6 +122,8 @@
 
 	display: flex;
 	flex-flow: column nowrap;
+	
+	overflow-x: hidden;
 }
 
 .windowTitleBar {
@@ -169,6 +171,17 @@
 	background-image: url("./system/svg/titlebarresizebox.svg");
 	background-size: var(--lengthTitlebarBoxInside) var(--lengthTitlebarBoxInside);
 	background-repeat: no-repeat;
+}
+
+/* remove and adjust title bar elements at small widths */
+@media (max-width: 315px) {
+	.windowCloseBox, .windowResizeBox {
+		display: none;
+	}
+	
+	.windowTitle {
+		margin: auto;
+	}
 }
 
 .windowContent {
@@ -310,7 +323,13 @@ body {
 }
 
 ul {
-	padding-inline-start: 3em;
+	padding-inline-start: 2em;
+}
+
+@media (max-width: 520px) {
+	ul {
+		padding-inline-start: 1em;
+	}
 }
 
 li {
@@ -329,7 +348,7 @@ li {
 	image-rendering: pixelated;
 	image-rendering: optimize-contrast;
 	-ms-interpolation-mode: nearest-neighbor;
-	-webkit-text-size-adjust: 150% !important;
+	-webkit-text-size-adjust: 125% !important;
 }
 
 /* some elements shouldn't have resized text right now */
@@ -504,22 +523,10 @@ a {
 	}
 }
 
-/* remove and adjust title bar elements at small widths */
-@media (max-width: 315px) {
-	.windowCloseBox, .windowResizeBox {
-		display: none;
-	}
-	
-	.windowTitle {
-		margin: auto;
-	}
-}
-
 @media (max-width: 450px) {
 	
 	#topMenuBar {
-		/*align-items: center;*/
-		/*padding: var(--lengthMenuBarTitleMargin);*/
+		padding-bottom: var(--lengthLineThickness) !important;
 	}
 	
 	.hideIfNarrow {
@@ -531,11 +538,8 @@ a {
 	}
 	
 	#topMenuBar > * {
-		/*height: 100% !important;*/
 		height: calc(2 * var(--lengthMenuBarHeight)) !important;
-		/*line-height: calc(var(--lengthMenuBarHeight) - 10px);*/
-		/*padding-top: 0;*/
-		/*padding-bottom: 0;*/
+		line-height: calc(var(--lengthMenuBarHeight) - 10px);
 		margin-top: 0;
 		margin-bottom: 0;
 		
@@ -543,21 +547,20 @@ a {
 		align-items: center;
 	}
 	
-	
 	.spacer {
 		display: none;
 	}
-	/*
-	
-	#clock {
-		text-align: left!important;
-	}
-	*/
 }
-@media (max-width: 230px) {
+@media (max-width: 260px) {
+	#appleMenu {
+		display: none;
+	}
 	#topMenuBar {
-		/*align-items: center;*/
-		padding: var(--lengthMenuBarTitleMargin);
+		flex-flow: column nowrap!important;
+	}
+	
+	#topMenuBar > * {
+		margin: 0;
 	}
 }
 
@@ -603,27 +606,55 @@ a {
 
 /* modules */
 .module {
-	max-width: calc(100% - calc(var(--integerScaling) * 100px));
-	margin: calc(var(--integerScaling) * 8px) auto calc(var(--integerScaling) * 40px);
+	--horiPaddingTotal: 128px;
+	--topPad: 8px;
+	--bottomPad: 40px;
+	--vertPadFactor: 1;
+	max-width: calc(100% - (var(--integerScaling) * var(--horiPaddingTotal))) !important;
+	margin: calc(var(--integerScaling) * var(--topPad)) auto calc(var(--integerScaling) * (var(--bottomPad) * var(--vertPadFactor)));
 }
 
-@media (max-width: 444px) {
+@media (max-width: 720px) {
 	.module {
-		max-width: calc(100% - calc(var(--integerScaling) * 50px));
+		--horiPaddingTotal: 64px!important;
+		--vertPadFactor: .5;
 	}
 }
 
+@media (max-width: 512px) {
+	.module {
+		--horiPaddingTotal: 32px!important;
+		--vertPadFactor: .25;
+	}
+}
+
+@media (max-width: 350px) {
+	.module {
+		--horiPaddingTotal: 16px!important;
+		--vertPadFactor: .125;
+	}
+}
+
+
 @media (max-height: 444px) {
 	.module {
-		margin: calc(var(--integerScaling) * 8px) auto calc(var(--integerScaling) * 20px);
+		--topPad: 8px;
+		--bottomPad: 20px;
 	}
 }
 
 @media (min-width: 1337px) {
 	.module {
-		max-width: 69vw;
+		max-width: 69vw!important;
 	}
 }
+
+@media (min-width: 1800px) {
+	.module {
+		max-width: 50vw!important;
+	}
+}
+
 
 .innerMargin {
 	margin: calc(var(--integerScaling) * 14px);
@@ -651,8 +682,9 @@ a {
 
 .fixedButton {
 	display: inline-block!important;
-	width: calc(var(--integerScaling) * 160px) !important;
-	height: calc(var(--integerScaling) * 28px) !important;
+	width: calc(var(--integerScaling) * 152px) !important;
+	height: calc(var(--integerScaling) * 20px) !important;
+	padding: calc(var(--integerScaling) * 4px) !important;
 
 	background-image: url('./system/svg/button.svg');
 	background-repeat: no-repeat!important;
@@ -667,7 +699,7 @@ a {
 	
 	margin-right: calc(var(--integerScaling) * 15px);
 	margin-bottom: calc(var(--integerScaling) * 8px);
-	line-height: 1.75em;
+	line-height: 1.25em;
 }
 
 .fixedButton:hover {
@@ -680,6 +712,22 @@ a {
 	color: var(--hi);
 	background-image: url('./system/svg/button_pressed.svg');
 	
+}
+
+@media (max-width: 315px) {
+	.fixedButton {
+		width: calc(var(--integerScaling) * 80px) !important;
+		height: calc(var(--integerScaling) * 32px) !important;
+		padding: calc(var(--integerScaling) * 8px) !important;
+		
+		background-image: url('./system/svg/button_slim.svg') !important;
+		line-height: 1em;
+	}
+	
+	.fixedButton:active {
+		background-image: url('./system/svg/button_pressed_slim.svg') !important;
+		
+	}
 }
 
 .buttonContainer {
