@@ -63,10 +63,10 @@
 					<polyline points="4 3 1 3 1 4 0 4 0 9 1 9 1 10 2 10 2 11 4 11 4 10 5 10 5 11 7 11 7 10 8 10 8 9 9 9 9 7 7 7 7 5 9 5 9 4 8 4 8 3 5 3 5 4 4 4"/>
 				</svg>-->
 			</div>
-			<div class="menu">Andrew's <br class="hideIfWide" />Downloads</div>
-			<a class="menu selectableMenu" href="../">Home</a>
-			<a class="menu selectableMenu hideIfNarrow" href="https://blog.yaros.ae/">Blog</a>
-			<a class="menu selectableMenu hideIfNarrow" href="./1984/">1984</a>
+			<!--<div class="menu">Andrew's <br class="hideIfWide" />Downloads</div>-->
+			<a class="menu selectableMenu" href="../">Homepage</a>
+			<a class="menu selectableMenu" href="https://blog.yaros.ae/">Web-log</a>
+			<a class="menu selectableMenu" href="./1984/">1984&nbsp;Theme</a>
 			<!--<a class="menu selectableMenu shortcut hideIfNarrow" href="https://lisagui.com" target="_blank">LisaGUI</a>-->
 			<div class="spacer"></div>
 		</div>
@@ -130,7 +130,7 @@
 			/* menu bar clock */
 
 			const clockMenu = document.createElement('div'), useAMPM = true, delimiter = ':'; //     
-			clockMenu.setAttribute('class', 'menu');
+			clockMenu.setAttribute('class', 'menu hideIfNarrow');
 			clockMenu.setAttribute('id', 'clock');
 			menuItems.append(clockMenu);
 
@@ -168,7 +168,7 @@
 			<div class="window module">
 				<div class="windowTitleBar">
 					<div class="windowCloseBox"></div>
-					<div class="windowTitle fontSystem">Info</div>
+					<div class="windowTitle fontSystem">Andrew's&nbsp;Downloads</div>
 					<div class="windowResizeBox"></div>
 				</div>
 				<div class="windowContent fontText"><div class="innerMargin">
