@@ -597,7 +597,7 @@ a {
 	fill: var(--hi) !important;
 }*/
 
-.selectableMenu:hover {
+.selectableMenu:hover, .highlightedMenu {
 	box-shadow: var(--lengthMenuBarSelectionPadding) 0 var(--lo), var(--lengthMenuBarSelectionPaddingNegative) 0 var(--lo), 4px 0 var(--lo), -4px 0 var(--lo);
 	background-color: var(--lo);
 	color: var(--hi);
