@@ -162,9 +162,14 @@
 	box-shadow: var(--lengthLineThickness) 0 var(--hi), var(--lengthLineThicknessNegative) 0 var(--hi);
 }
 
+/* these need to be important since I'm using header tags for these*/
 .windowTitle {
-	padding: 0 var(--lengthTitlebarTextPadding) 0 var(--lengthTitlebarTextPadding);
-	line-height: var(--lengthTitlebarInsideHeight);
+	display: block!important;
+	margin: 0!important;
+	padding: 0 var(--lengthTitlebarTextPadding) 0 var(--lengthTitlebarTextPadding) !important;
+	line-height: var(--lengthTitlebarInsideHeight) !important;
+	background-color: var(--hi) !important;
+	font-weight: normal !important;
 }
 
 .windowResizeBox {
