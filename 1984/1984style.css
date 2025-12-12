@@ -72,14 +72,21 @@ p { margin-bottom: 1.1em; }
 #titlebar {
 	height: 50px;
 
-	font-family: 'Apple Garamond', "Adobe Garamond", serif;
-	font-size: 36px;
-	line-height: 1em;
 	padding-bottom: 10px;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	gap: 10px;
+}
+
+#titleText {
+	display: block!important;
+	font-family: 'Apple Garamond', "Adobe Garamond", serif !important;
+	font-size: 36px!important;
+	line-height: 1em!important;
+	font-weight: normal!important;
+	padding: 0!important;
+	margin: 0!important;
 }
 
 .spacer { flex-grow: 1; }
@@ -134,9 +141,12 @@ p { margin-bottom: 1.1em; }
 }
 
 .subtitle {
-	font-size: 22px;
-	margin-bottom: 1em;
-	line-height: 1em;
+	font-size: 22px!important;
+	margin: 0!important;
+	margin-bottom: 1em!important;
+	line-height: 1em!important;
+	font-weight: normal!important;
+	padding: 0!important;
 }
 
 hr {
