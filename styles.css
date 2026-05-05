@@ -97,10 +97,15 @@
 	color-scheme: only light!important;
 	--lo: black;
 	--hi: white;
+}
 
-	/* Firefox Scrollbars */
-	/* This disables custom scrollbars on chrome... */
-	/*scrollbar-color: var(--lo) var(--hi);*/
+@-moz-document url-prefix() {
+	:root {
+		/* Firefox Scrollbars */
+		/* This disables custom scrollbars on chrome...
+		...so only use within this vendor-specific @ rule */
+		scrollbar-color: var(--lo) #b6b6b6;
+	}
 }
 
 /* override scale state at small widths and heights */
