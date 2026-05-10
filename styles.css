@@ -653,13 +653,13 @@ a {
 	}
 }
 
-@media (min-width: 1337px) {
+@media (min-width: 1000px) {
 	.module {
 		max-width: 69vw!important;
 	}
 }
 
-@media (min-width: 1800px) {
+@media (min-width: 1500px) {
 	.module {
 		max-width: 50vw!important;
 	}
