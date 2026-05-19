@@ -538,11 +538,11 @@ a {
 	#topMenuBar {
 		padding-bottom: var(--lengthLineThickness) !important;
 	}
-	
-	.hideIfNarrow {
+
+	#clock {
 		display: none;
 	}
-	
+
 	.hideIfWide {
 		display: initial;
 	}
@@ -561,6 +561,12 @@ a {
 		display: none;
 	}
 }
+@media (max-width: 350px) {
+	.hideIfNarrow {
+		display: none;
+	}
+}
+
 @media (max-width: 260px) {
 	#appleMenu {
 		display: none;
