@@ -452,6 +452,14 @@ a {
 	cursor: pointer!important;
 }
 
+#desktop a:not(.fixedButton) {
+	color: #0000ff;
+}
+
+#desktop a:visited:not(.fixedButton) {
+	color: #800080;
+}
+
 .solidHR {
 	border: none;
 	border-top: var(--lengthLineThickness) solid var(--lo);
