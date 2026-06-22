@@ -94,7 +94,7 @@
 	--lengthTitlebarTextPadding: calc(var(--integerScaling) * 7px);
 
 	/*====== Colors ======*/
-	color-scheme: only light!important;
+	/*color-scheme: only light!important;*/
 	--lo: black;
 	--hi: white;
 	--scrollbarColor: #b6b6b6;
@@ -763,4 +763,38 @@ a {
 .windowLink {
 	width: 1px!important;
 	height: 1px!important;
+}
+
+/* dark mode! */
+@supports (filter: invert(1)) {
+	@media (prefers-color-scheme: dark) {
+		.moduleBanner, img, .screencorner {
+			filter: invert(1) !important;
+		}
+
+		body, #monitor {
+			background-color: var(--hi) !important;
+		}
+
+		body {
+			filter: invert(1) !important;
+		}
+
+		:root {
+			--scrollbarColor: #969696 !important;
+		}
+
+		#screen {
+			background-image: url("./system/svg/randomDots.svg") !important;
+		}
+
+		#desktop a:not(.fixedButton) {
+			color: #ff0000!important;
+		}
+
+		#desktop a:visited:not(.fixedButton) {
+			color: #00ff00!important;
+		}
+
+	}
 }
