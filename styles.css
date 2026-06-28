@@ -782,11 +782,11 @@ a {
 		}
 
 		:root {
-			--scrollbarColor: #969696 !important;
+			--scrollbarColor: #e5e5e5 !important;
 		}
 
 		#screen {
-			background-image: url("./system/svg/randomDots.svg") !important;
+			background-image: url("./system/svg/lighter.svg") !important;
 		}
 
 		#desktop a:not(.fixedButton) {
