@@ -453,6 +453,10 @@ a {
 	cursor: pointer!important;
 }
 
+a[target=_blank] {
+	cursor: alias!important;
+}
+
 #desktop a:not(.fixedButton) {
 	color: #0000ff;
 }
