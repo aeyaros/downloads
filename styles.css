@@ -79,7 +79,7 @@
 	--lengthScrollbarButtonInnerElement: calc(var(--integerScaling) * 14px);
 	--lengthScrollbarReducedButton: calc(var(--integerScaling) * 15px);
 
-	--lengthMenuBarHeight: calc(var(--integerScaling) * 20px);
+	--lengthMenuBarHeight: calc(var(--integerScaling) * 40px);
 	--lengthMenuBarTitleMargin: calc(var(--integerScaling) * 15px);
 	--lengthMenuBarSelectionPadding:calc(var(--integerScaling) * 10px);
 	--lengthMenuBarSelectionPaddingNegative: calc(-1 * var(--lengthMenuBarSelectionPadding));
@@ -99,6 +99,13 @@
 	--lo: black;
 	--hi: white;
 	--scrollbarColor: #b6b6b6;
+}
+
+/* if there's a mouse, use the normal thickness of the menu bar */
+@media (pointer: fine) {
+	:root {
+		--lengthMenuBarHeight: calc(var(--integerScaling) * 20px);
+	}
 }
 
 @-moz-document url-prefix() {
@@ -561,11 +568,10 @@ a[target=_blank] {
 		display: initial;
 	}
 	
+	
 	#topMenuBar > * {
-		height: calc(2 * var(--lengthMenuBarHeight)) !important;
-		line-height: calc(var(--lengthMenuBarHeight) - 10px);
-		margin-top: 0;
-		margin-bottom: 0;
+		/*height: calc(2 * var(--lengthMenuBarHeight)) !important;*/
+		/*line-height: calc(var(--lengthMenuBarHeight) - 10px);*/
 		
 		justify-content: center;
 		align-items: center;
@@ -586,7 +592,8 @@ a[target=_blank] {
 		display: none;
 	}
 	#topMenuBar {
-		flex-flow: column nowrap!important;
+		display: block;
+		overflow: unset!important;
 	}
 	
 	#topMenuBar > * {
