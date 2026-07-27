@@ -246,11 +246,13 @@
 
 ::-webkit-scrollbar-thumb:vertical {
 	width: var(--lengthScrollbarReducedButton) !important;
+	min-height: var(--lengthScrollbarThickness);
 	box-shadow: inset var(--lengthLineThickness) 0 var(--lo);
 }
 
 ::-webkit-scrollbar-thumb:horizontal {
 	height: var(--lengthScrollbarReducedButton) !important;
+	min-width: var(--lengthScrollbarThickness);
 	box-shadow: inset 0 var(--lengthLineThickness) var(--lo);
 }
 
